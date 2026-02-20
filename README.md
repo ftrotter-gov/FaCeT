@@ -1,4 +1,4 @@
-# National Provider Directory Credential Codeset BETA 
+# FACET - Framework for Accreditation & Credential Enumeration Taxonomy 
 
 [![BETA](https://img.shields.io/badge/-BETA-red?style=for-the-badge&labelColor=red)](#)
 
