@@ -67,6 +67,11 @@ Which recently resulted in:
 The duplicate_abbreviation_code shows which is the more common meaning when possible.
 
 
+
+
 ## Contributing
 Thank you for considering contributing to an Open Source project of the US Government! For more information about our contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+So far I (Fred Trotter, the initial author) have not been able to find something like this available as a prexisting dataset. If there is a better, more comprehensive clinical credential codeset please get in touch. I would be more than happy to retire this effort in favor of something maintained by someone who has time to do a comprehensive job, including supporting more robust support for international clinical credentials. 
+
 
