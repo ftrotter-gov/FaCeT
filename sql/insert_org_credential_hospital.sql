@@ -917,3 +917,482 @@ INSERT INTO org_credential (
     'https://www.nursingworld.org/organizational-programs/pathway/'
 );
 
+-- Baby Friendly
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1500,
+    'certification',
+    'Baby-Friendly USA',
+    'https://www.babyfriendlyusa.org',
+    'bfusa_baby_friendly_hospital_designation',
+    'Baby-Friendly Hospital Designation',
+    'https://www.babyfriendlyusa.org/for-facilities/'
+);
+
+-- CARF
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1600,
+    'certification',
+    'Commission on Accreditation of Rehabilitation Facilities',
+    'https://www.carf.org',
+    'carf_inpatient_rehabilitation_accreditation',
+    'CARF Inpatient Rehabilitation Program Accreditation',
+    'https://www.carf.org/accreditation/'
+),
+(
+    1601,
+    'certification',
+    'Commission on Accreditation of Rehabilitation Facilities',
+    'https://www.carf.org',
+    'carf_brain_injury_rehabilitation_accreditation',
+    'CARF Brain Injury Rehabilitation Program Accreditation',
+    'https://www.carf.org/accreditation/'
+),
+(
+    1602,
+    'certification',
+    'Commission on Accreditation of Rehabilitation Facilities',
+    'https://www.carf.org',
+    'carf_stroke_rehabilitation_accreditation',
+    'CARF Stroke Rehabilitation Program Accreditation',
+    'https://www.carf.org/accreditation/'
+),
+(
+    1603,
+    'certification',
+    'Commission on Accreditation of Rehabilitation Facilities',
+    'https://www.carf.org',
+    'carf_spinal_cord_injury_rehabilitation_accreditation',
+    'CARF Spinal Cord Injury Rehabilitation Program Accreditation',
+    'https://www.carf.org/accreditation/'
+),
+(
+    1604,
+    'certification',
+    'Commission on Accreditation of Rehabilitation Facilities',
+    'https://www.carf.org',
+    'carf_amputation_rehabilitation_accreditation',
+    'CARF Amputation Rehabilitation Program Accreditation',
+    'https://www.carf.org/accreditation/'
+),
+(
+    1605,
+    'certification',
+    'Commission on Accreditation of Rehabilitation Facilities',
+    'https://www.carf.org',
+    'carf_cardiac_rehabilitation_accreditation',
+    'CARF Cardiac Rehabilitation Program Accreditation',
+    'https://www.carf.org/accreditation/'
+),
+(
+    1606,
+    'certification',
+    'Commission on Accreditation of Rehabilitation Facilities',
+    'https://www.carf.org',
+    'carf_pulmonary_rehabilitation_accreditation',
+    'CARF Pulmonary Rehabilitation Program Accreditation',
+    'https://www.carf.org/accreditation/'
+);
+
+-- ABA
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1700,
+    'certification',
+    'American Burn Association',
+    'https://ameriburn.org',
+    'aba_adult_burn_center_verification',
+    'ABA Verified Adult Burn Center',
+    'https://ameriburn.org/quality-care/burn-center-verification/'
+),
+(
+    1701,
+    'certification',
+    'American Burn Association',
+    'https://ameriburn.org',
+    'aba_pediatric_burn_center_verification',
+    'ABA Verified Pediatric Burn Center',
+    'https://ameriburn.org/quality-care/burn-center-verification/'
+),
+(
+    1702,
+    'certification',
+    'American Burn Association',
+    'https://ameriburn.org',
+    'aba_combined_burn_center_verification',
+    'ABA Verified Adult and Pediatric Burn Center',
+    'https://ameriburn.org/quality-care/burn-center-verification/'
+);
+
+-- Undersea & Hyperbaric Medical Society
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1800,
+    'certification',
+    'Undersea & Hyperbaric Medical Society',
+    'https://www.uhms.org',
+    'uhms_hyperbaric_facility_accreditation',
+    'UHMS Hyperbaric Facility Accreditation',
+    'https://www.uhms.org/accreditation.html'
+);
+
+-- Other
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1900,
+    'certification',
+    'American Academy of Sleep Medicine',
+    'https://aasm.org',
+    'aasm_sleep_center_accreditation',
+    'AASM Sleep Center Accreditation',
+    'https://aasm.org/accreditation/'
+),
+(
+    1901,
+    'certification',
+    'AABB',
+    'https://www.aabb.org',
+    'aabb_blood_bank_transfusion_service_accreditation',
+    'AABB Blood Bank / Transfusion Service Accreditation',
+    'https://www.aabb.org/standards-accreditation/accreditation'
+),
+(
+    1902,
+    'certification',
+    'Foundation for the Accreditation of Cellular Therapy',
+    'https://www.factglobal.org',
+    'fact_cellular_therapy_accreditation',
+    'FACT Cellular Therapy Accreditation',
+    'https://www.factglobal.org/accreditation/'
+),
+(
+    1903,
+    'certification',
+    'Intersocietal Accreditation Commission',
+    'https://www.intersocietal.org',
+    'iac_echocardiography_accreditation',
+    'IAC Echocardiography Accreditation',
+    'https://www.intersocietal.org/echo/'
+),
+(
+    1904,
+    'certification',
+    'Intersocietal Accreditation Commission',
+    'https://www.intersocietal.org',
+    'iac_nuclear_pet_accreditation',
+    'IAC Nuclear/PET Accreditation',
+    'https://www.intersocietal.org/nuclear/'
+),
+(
+    1905,
+    'certification',
+    'Intersocietal Accreditation Commission',
+    'https://www.intersocietal.org',
+    'iac_vascular_testing_accreditation',
+    'IAC Vascular Testing Accreditation',
+    'https://www.intersocietal.org/vascular/'
+),
+(
+    1906,
+    'certification',
+    'Intersocietal Accreditation Commission',
+    'https://www.intersocietal.org',
+    'iac_cardiac_ct_accreditation',
+    'IAC Cardiac CT Accreditation',
+    'https://www.intersocietal.org/ct/'
+);
+
+-- American College of Cardiology (ACC) Accreditation Services
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1950,
+    'certification',
+    'American College of Cardiology',
+    'https://cvquality.acc.org',
+    'acc_chest_pain_center_accreditation',
+    'ACC Chest Pain Center Accreditation',
+    'https://cvquality.acc.org/accreditation'
+),
+(
+    1951,
+    'certification',
+    'American College of Cardiology',
+    'https://cvquality.acc.org',
+    'acc_heart_failure_accreditation',
+    'ACC Heart Failure Accreditation',
+    'https://cvquality.acc.org/accreditation'
+),
+(
+    1952,
+    'certification',
+    'American College of Cardiology',
+    'https://cvquality.acc.org',
+    'acc_cardiac_cath_lab_accreditation',
+    'ACC Cardiac Catheterization Lab Accreditation',
+    'https://cvquality.acc.org/accreditation'
+),
+(
+    1953,
+    'certification',
+    'American College of Cardiology',
+    'https://cvquality.acc.org',
+    'acc_electrophysiology_lab_accreditation',
+    'ACC Electrophysiology Lab Accreditation',
+    'https://cvquality.acc.org/accreditation'
+),
+(
+    1954,
+    'certification',
+    'American College of Cardiology',
+    'https://cvquality.acc.org',
+    'acc_transcatheter_valve_certification',
+    'ACC Transcatheter Valve Certification',
+    'https://cvquality.acc.org/accreditation'
+),
+(
+    1955,
+    'certification',
+    'American College of Cardiology',
+    'https://cvquality.acc.org',
+    'acc_cardiovascular_imaging_accreditation',
+    'ACC Cardiovascular Imaging Accreditation',
+    'https://cvquality.acc.org/accreditation'
+);
+
+-- NCI
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    2000,
+    'designation',
+    'National Cancer Institute',
+    'https://www.cancer.gov',
+    'nci_cancer_center_designation',
+    'NCI Designated Cancer Center',
+    'https://www.cancer.gov/research/infrastructure/cancer-centers'
+),
+(
+    2001,
+    'designation',
+    'National Cancer Institute',
+    'https://www.cancer.gov',
+    'nci_comprehensive_cancer_center_designation',
+    'NCI Designated Comprehensive Cancer Center',
+    'https://www.cancer.gov/research/infrastructure/cancer-centers'
+),
+(
+    2002,
+    'designation',
+    'National Cancer Institute',
+    'https://www.cancer.gov',
+    'nci_basic_laboratory_cancer_center_designation',
+    'NCI Designated Basic Laboratory Cancer Center',
+    'https://www.cancer.gov/research/infrastructure/cancer-centers'
+);
+
+
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1990,
+    'certification',
+    'Planetree International',
+    'https://planetree.org',
+    'planetree_person_centered_care_certification',
+    'Planetree Person-Centered Care Certification',
+    'https://planetree.org/person-centered-care-certification/'
+);
+
+-- American College of Emergency Physicians
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1960,
+    'certification',
+    'American College of Emergency Physicians',
+    'https://www.acep.org',
+    'acep_geriatric_emergency_department_level_1_accreditation',
+    'ACEP Level 1 Geriatric Emergency Department Accreditation',
+    'https://www.acep.org/geda/'
+),
+(
+    1961,
+    'certification',
+    'American College of Emergency Physicians',
+    'https://www.acep.org',
+    'acep_geriatric_emergency_department_level_2_accreditation',
+    'ACEP Level 2 Geriatric Emergency Department Accreditation',
+    'https://www.acep.org/geda/'
+),
+(
+    1962,
+    'certification',
+    'American College of Emergency Physicians',
+    'https://www.acep.org',
+    'acep_geriatric_emergency_department_level_3_accreditation',
+    'ACEP Level 3 Geriatric Emergency Department Accreditation',
+    'https://www.acep.org/geda/'
+);
+
+-- DNV certifications
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1965,
+    'certification',
+    'Society for Cardiovascular Patient Care',
+    'https://scpc.org',
+    'scpc_chest_pain_center_accreditation',
+    'SCPC Chest Pain Center Accreditation',
+    'https://scpc.org/accreditation/'
+);
+
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1970,
+    'certification',
+    'DNV Healthcare',
+    'https://www.dnv.com',
+    'dnv_primary_stroke_center_certification',
+    'DNV Primary Stroke Center Certification',
+    'https://www.dnv.com/assurance/healthcare/'
+),
+(
+    1971,
+    'certification',
+    'DNV Healthcare',
+    'https://www.dnv.com',
+    'dnv_comprehensive_stroke_center_certification',
+    'DNV Comprehensive Stroke Center Certification',
+    'https://www.dnv.com/assurance/healthcare/'
+),
+(
+    1972,
+    'certification',
+    'DNV Healthcare',
+    'https://www.dnv.com',
+    'dnv_thrombectomy_capable_stroke_center_certification',
+    'DNV Thrombectomy-Capable Stroke Center Certification',
+    'https://www.dnv.com/assurance/healthcare/'
+),
+(
+    1973,
+    'certification',
+    'DNV Healthcare',
+    'https://www.dnv.com',
+    'dnv_acute_stroke_ready_hospital_certification',
+    'DNV Acute Stroke Ready Hospital Certification',
+    'https://www.dnv.com/assurance/healthcare/'
+),
+(
+    1974,
+    'certification',
+    'DNV Healthcare',
+    'https://www.dnv.com',
+    'dnv_orthopedic_center_of_excellence',
+    'DNV Orthopedic Center of Excellence Certification',
+    'https://www.dnv.com/assurance/healthcare/'
+),
+(
+    1975,
+    'certification',
+    'DNV Healthcare',
+    'https://www.dnv.com',
+    'dnv_spine_surgery_center_of_excellence',
+    'DNV Spine Surgery Center of Excellence Certification',
+    'https://www.dnv.com/assurance/healthcare/'
+),
+(
+    1976,
+    'certification',
+    'DNV Healthcare',
+    'https://www.dnv.com',
+    'dnv_hip_knee_replacement_center_of_excellence',
+    'DNV Hip and Knee Replacement Center of Excellence Certification',
+    'https://www.dnv.com/assurance/healthcare/'
+);
