@@ -1,3 +1,0 @@
-Organizational Credentials
-==========================
-
