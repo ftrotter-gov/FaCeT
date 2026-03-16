@@ -1,0 +1,1205 @@
+-- Hospital org credentials: certification
+-- Split from insert_org_credential_hospital.sql
+
+-- Joint Commission Certifications
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+    (
+        1000,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_acute_myocardial_infarction_certification',
+        'Joint Commission Acute Myocardial Infarction Certification',
+        'https://www.jointcommission.org/en-us/certification/cardiac'
+    ),
+    (
+        1001,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_chest_pain_certification',
+        'Joint Commission Chest Pain Certification',
+        'https://www.jointcommission.org/en-us/certification/cardiac'
+    ),
+    (
+        1002,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_heart_failure_certification',
+        'Joint Commission Heart Failure Certification',
+        'https://www.jointcommission.org/en-us/certification/cardiac'
+    ),
+    (
+        1003,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_comprehensive_cardiac_center_certification',
+        'Joint Commission Comprehensive Cardiac Center Certification',
+        'https://www.jointcommission.org/en-us/certification/cardiac'
+    ),
+    (
+        1004,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_comprehensive_heart_attack_center_certification',
+        'Joint Commission Comprehensive Heart Attack Center Certification',
+        'https://www.jointcommission.org/en-us/certification/cardiac'
+    ),
+    (
+        1005,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_advanced_heart_failure_certification',
+        'Joint Commission Advanced Heart Failure Certification',
+        'https://www.jointcommission.org/en-us/certification/cardiac'
+    ),
+    (
+        1006,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_acute_heart_attack_ready_certification',
+        'Joint Commission Acute Heart Attack Ready Certification',
+        'https://www.jointcommission.org/en-us/certification/cardiac'
+    ),
+    (
+        1007,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_primary_heart_attack_center_certification',
+        'Joint Commission Primary Heart Attack Center Certification',
+        'https://www.jointcommission.org/en-us/certification/cardiac'
+    ),
+    (
+        1008,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_ventricular_assist_device_certification',
+        'Joint Commission Ventricular Assist Device Certification',
+        'https://www.jointcommission.org/en-us/certification/cardiac'
+    ),
+    (
+        1009,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_centralized_sterilization_services_certification',
+        'Joint Commission Centralized Sterilization Services Certification',
+        'https://www.jointcommission.org/en-us/certification/centralized-sterilization-services'
+    ),
+    (
+        1010,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_advanced_inpatient_diabetes_certification',
+        'Joint Commission Advanced Inpatient Diabetes Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1011,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_bariatric_surgery_certification',
+        'Joint Commission Bariatric Surgery Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1012,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_brain_tumor_certification',
+        'Joint Commission Brain Tumor Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1013,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_lung_cancer_certification',
+        'Joint Commission Lung Cancer Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1014,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_sepsis_certification',
+        'Joint Commission Sepsis Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1015,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_wound_care_certification',
+        'Joint Commission Wound Care Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1016,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_pneumonia_certification',
+        'Joint Commission Pneumonia Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1017,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_tuberculosis_certification',
+        'Joint Commission Tuberculosis Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1018,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_medication_compounding_certification',
+        'Joint Commission Medication Compounding Certification',
+        'https://www.jointcommission.org/en-us/certification/medication-compounding'
+    ),
+    (
+        1019,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_hip_fracture_certification',
+        'Joint Commission Hip Fracture Certification',
+        'https://www.jointcommission.org/en-us/certification/orthopedic'
+    ),
+    (
+        1020,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_joint_replacement_hip_certification',
+        'Joint Commission Joint Replacement (Hip) Certification',
+        'https://www.jointcommission.org/en-us/certification/orthopedic'
+    ),
+    (
+        1021,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_joint_replacement_knee_certification',
+        'Joint Commission Joint Replacement (Knee) Certification',
+        'https://www.jointcommission.org/en-us/certification/orthopedic'
+    ),
+    (
+        1022,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_joint_replacement_shoulder_certification',
+        'Joint Commission Joint Replacement (Shoulder) Certification',
+        'https://www.jointcommission.org/en-us/certification/orthopedic'
+    ),
+    (
+        1023,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_spinal_fusion_certification',
+        'Joint Commission Spinal Fusion Certification',
+        'https://www.jointcommission.org/en-us/certification/orthopedic'
+    ),
+    (
+        1024,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_spine_surgery_certification',
+        'Joint Commission Spine Surgery Certification',
+        'https://www.jointcommission.org/en-us/certification/orthopedic'
+    ),
+    (
+        1025,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_advanced_spine_surgery_certification',
+        'Joint Commission Advanced Spine Surgery Certification',
+        'https://www.jointcommission.org/en-us/certification/orthopedic'
+    ),
+    (
+        1026,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_advanced_total_hip_knee_replacement_certification',
+        'Joint Commission Advanced Total Hip and Knee Replacement Certification',
+        'https://www.jointcommission.org/en-us/certification/orthopedic'
+    ),
+    (
+        1027,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_palliative_care_certification',
+        'Joint Commission Palliative Care Certification',
+        'https://www.jointcommission.org/en-us/certification/palliative-care'
+    ),
+    (
+        1028,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_patient_blood_management_certification',
+        'Joint Commission Patient Blood Management Certification',
+        'https://www.jointcommission.org/en-us/certification/patient-blood-management'
+    ),
+    (
+        1029,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_pediatric_asthma_certification',
+        'Joint Commission Pediatric Asthma Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1030,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_outcomes_driven_perinatal_care_certification',
+        'Joint Commission Outcomes-Driven Certification in Perinatal Care',
+        'https://www.jointcommission.org/en-us/certification/perinatal-care'
+    ),
+    (
+        1031,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_advanced_perinatal_care_certification',
+        'Joint Commission Advanced Certification in Perinatal Care',
+        'https://www.jointcommission.org/en-us/certification/perinatal-care'
+    ),
+    (
+        1032,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_amputee_rehabilitation_certification',
+        'Joint Commission Amputee Rehabilitation Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1033,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_brain_injury_rehabilitation_certification',
+        'Joint Commission Brain Injury Rehabilitation Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1034,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_cardiac_rehabilitation_certification',
+        'Joint Commission Cardiac Rehabilitation Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1035,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_hip_fracture_rehabilitation_certification',
+        'Joint Commission Hip Fracture Rehabilitation Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1036,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_parkinsons_disease_rehabilitation_certification',
+        'Joint Commission Parkinson''s Disease Rehabilitation Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1037,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_pulmonary_rehabilitation_certification',
+        'Joint Commission Pulmonary Rehabilitation Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1038,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_spinal_cord_injury_rehabilitation_certification',
+        'Joint Commission Spinal Cord Injury Rehabilitation Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1039,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_stroke_rehabilitation_certification',
+        'Joint Commission Stroke Rehabilitation Certification',
+        'https://www.jointcommission.org/en-us/certification/stroke'
+    ),
+    (
+        1040,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_copd_certification',
+        'Joint Commission COPD Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1041,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_integrated_care_certification',
+        'Joint Commission Integrated Care Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1042,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_respiratory_failure_certification',
+        'Joint Commission Respiratory Failure Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1043,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_lung_volume_reduction_surgery_certification',
+        'Joint Commission Lung Volume Reduction Surgery Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1044,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_advanced_copd_certification',
+        'Joint Commission Advanced COPD Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1045,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_chronic_kidney_disease_certification',
+        'Joint Commission Chronic Kidney Disease Certification',
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+    ),
+    (
+        1046,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_acute_stroke_ready_hospital_certification',
+        'Joint Commission Acute Stroke Ready Hospital Certification',
+        'https://www.jointcommission.org/en-us/certification/stroke'
+    ),
+    (
+        1047,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_comprehensive_stroke_center_certification',
+        'Joint Commission Comprehensive Stroke Center Certification',
+        'https://www.jointcommission.org/en-us/certification/stroke'
+    ),
+    (
+        1048,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_primary_stroke_center_certification',
+        'Joint Commission Primary Stroke Center Certification',
+        'https://www.jointcommission.org/en-us/certification/stroke'
+    ),
+    (
+        1049,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_thrombectomy_capable_stroke_center_certification',
+        'Joint Commission Thrombectomy-Capable Stroke Center Certification',
+        'https://www.jointcommission.org/en-us/certification/stroke'
+    ),
+    (
+        1050,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_primary_care_medical_home_certification',
+        'Joint Commission Primary Care Medical Home Certification',
+        'https://www.jointcommission.org/en-us/certification/primary-care-medical-home'
+    ),
+    (
+        1051,
+        'certification',
+        'The Joint Commission',
+        'https://www.jointcommission.org',
+        'jc_responsible_use_of_health_data_certification',
+        'Joint Commission Responsible Use of Health Data Certification',
+        'https://www.jointcommission.org/en-us/certification/responsible-use-of-health-data'
+    );
+
+
+-- American College of Surgeons
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1100,
+    'certification',
+    'American College of Surgeons',
+    'https://www.facs.org',
+    'acs_trauma_center_level_1_verification',
+    'ACS Level I Trauma Center Verification',
+    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/'
+),
+(
+    1101,
+    'certification',
+    'American College of Surgeons',
+    'https://www.facs.org',
+    'acs_trauma_center_level_2_verification',
+    'ACS Level II Trauma Center Verification',
+    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/'
+),
+(
+    1102,
+    'certification',
+    'American College of Surgeons',
+    'https://www.facs.org',
+    'acs_trauma_center_level_3_verification',
+    'ACS Level III Trauma Center Verification',
+    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/'
+),
+(
+    1103,
+    'certification',
+    'American College of Surgeons',
+    'https://www.facs.org',
+    'acs_trauma_center_level_4_verification',
+    'ACS Level IV Trauma Center Verification',
+    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/'
+),
+(
+    1104,
+    'certification',
+    'American College of Surgeons',
+    'https://www.facs.org',
+    'acs_commission_on_cancer_accreditation',
+    'ACS Commission on Cancer Accredited Program',
+    'https://www.facs.org/quality-programs/cancer-programs/commission-on-cancer/'
+),
+(
+    1105,
+    'certification',
+    'American College of Surgeons',
+    'https://www.facs.org',
+    'acs_breast_center_accreditation',
+    'ACS National Accreditation Program for Breast Centers (NAPBC)',
+    'https://www.facs.org/quality-programs/cancer-programs/national-accreditation-program-for-breast-centers/'
+),
+(
+    1106,
+    'certification',
+    'American College of Surgeons',
+    'https://www.facs.org',
+    'acs_rectal_cancer_program_accreditation',
+    'ACS National Accreditation Program for Rectal Cancer (NAPRC)',
+    'https://www.facs.org/quality-programs/cancer-programs/national-accreditation-program-for-rectal-cancer/'
+),
+(
+    1107,
+    'certification',
+    'American College of Surgeons',
+    'https://www.facs.org',
+    'acs_bariatric_surgery_center_accreditation',
+    'ACS MBSAQIP Accredited Bariatric Surgery Center',
+    'https://www.facs.org/quality-programs/mbsaqip/'
+),
+(
+    1108,
+    'certification',
+    'American College of Surgeons',
+    'https://www.facs.org',
+    'acs_childrens_surgery_center_verification',
+    'ACS Children''s Surgery Center Verification',
+    'https://www.facs.org/quality-programs/childrens-surgery-verification/'
+);
+
+
+-- American Heart Association
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1200,
+    'certification',
+    'American Heart Association',
+    'https://www.heart.org',
+    'aha_cardiac_care_certification',
+    'American Heart Association Cardiac Care Certification',
+    'https://www.heart.org/en/professional/quality-improvement/healthcare-certification'
+),
+(
+    1201,
+    'certification',
+    'American Heart Association',
+    'https://www.heart.org',
+    'aha_heart_failure_certification',
+    'American Heart Association Heart Failure Certification',
+    'https://www.heart.org/en/professional/quality-improvement/healthcare-certification'
+),
+(
+    1202,
+    'certification',
+    'American Heart Association',
+    'https://www.heart.org',
+    'aha_acute_coronary_syndrome_certification',
+    'American Heart Association Acute Coronary Syndrome Certification',
+    'https://www.heart.org/en/professional/quality-improvement/healthcare-certification'
+),
+(
+    1203,
+    'certification',
+    'American Heart Association',
+    'https://www.heart.org',
+    'aha_stroke_system_of_care_certification',
+    'American Heart Association Stroke System of Care Certification',
+    'https://www.heart.org/en/professional/quality-improvement/healthcare-certification'
+),
+(
+    1204,
+    'certification',
+    'American Heart Association',
+    'https://www.heart.org',
+    'aha_cardiac_rehabilitation_certification',
+    'American Heart Association Cardiac Rehabilitation Certification',
+    'https://www.heart.org/en/professional/quality-improvement/healthcare-certification'
+);
+
+
+-- American College of Radiology
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1300,
+    'certification',
+    'American College of Radiology',
+    'https://www.acr.org',
+    'acr_computed_tomography_accreditation',
+    'ACR Computed Tomography (CT) Accreditation',
+    'https://www.acraccreditation.org/modalities/ct'
+),
+(
+    1301,
+    'certification',
+    'American College of Radiology',
+    'https://www.acr.org',
+    'acr_magnetic_resonance_imaging_accreditation',
+    'ACR Magnetic Resonance Imaging (MRI) Accreditation',
+    'https://www.acraccreditation.org/modalities/mri'
+),
+(
+    1302,
+    'certification',
+    'American College of Radiology',
+    'https://www.acr.org',
+    'acr_mammography_accreditation',
+    'ACR Mammography Accreditation',
+    'https://www.acraccreditation.org/modalities/mammography'
+),
+(
+    1303,
+    'certification',
+    'American College of Radiology',
+    'https://www.acr.org',
+    'acr_nuclear_medicine_accreditation',
+    'ACR Nuclear Medicine Accreditation',
+    'https://www.acraccreditation.org/modalities/nuclear-medicine'
+),
+(
+    1304,
+    'certification',
+    'American College of Radiology',
+    'https://www.acr.org',
+    'acr_pet_accreditation',
+    'ACR PET Accreditation',
+    'https://www.acraccreditation.org/modalities/pet'
+),
+(
+    1305,
+    'certification',
+    'American College of Radiology',
+    'https://www.acr.org',
+    'acr_radiation_oncology_accreditation',
+    'ACR Radiation Oncology Accreditation',
+    'https://www.acraccreditation.org/modalities/radiation-oncology'
+),
+(
+    1306,
+    'certification',
+    'American College of Radiology',
+    'https://www.acr.org',
+    'acr_stereotactic_breast_biopsy_accreditation',
+    'ACR Stereotactic Breast Biopsy Accreditation',
+    'https://www.acraccreditation.org/modalities/stereotactic-breast-biopsy'
+),
+(
+    1307,
+    'certification',
+    'American College of Radiology',
+    'https://www.acr.org',
+    'acr_ultrasound_accreditation',
+    'ACR Ultrasound Accreditation',
+    'https://www.acraccreditation.org/modalities/ultrasound'
+),
+(
+    1308,
+    'certification',
+    'American College of Radiology',
+    'https://www.acr.org',
+    'acr_breast_imaging_center_of_excellence',
+    'ACR Breast Imaging Center of Excellence',
+    'https://www.acraccreditation.org/accreditation/bicoe'
+);
+
+
+-- American Nurses Credentialing Center
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1400,
+    'certification',
+    'American Nurses Credentialing Center',
+    'https://www.nursingworld.org/ancc',
+    'ancc_magnet_recognition',
+    'ANCC Magnet Recognition Program',
+    'https://www.nursingworld.org/organizational-programs/magnet/'
+),
+(
+    1401,
+    'certification',
+    'American Nurses Credentialing Center',
+    'https://www.nursingworld.org/ancc',
+    'ancc_pathway_to_excellence',
+    'ANCC Pathway to Excellence Designation',
+    'https://www.nursingworld.org/organizational-programs/pathway/'
+);
+
+
+-- Baby Friendly
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1500,
+    'certification',
+    'Baby-Friendly USA',
+    'https://www.babyfriendlyusa.org',
+    'bfusa_baby_friendly_hospital_designation',
+    'Baby-Friendly Hospital Designation',
+    'https://www.babyfriendlyusa.org/for-facilities/'
+);
+
+
+-- CARF
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1600,
+    'certification',
+    'Commission on Accreditation of Rehabilitation Facilities',
+    'https://www.carf.org',
+    'carf_inpatient_rehabilitation_accreditation',
+    'CARF Inpatient Rehabilitation Program Accreditation',
+    'https://www.carf.org/accreditation/'
+),
+(
+    1601,
+    'certification',
+    'Commission on Accreditation of Rehabilitation Facilities',
+    'https://www.carf.org',
+    'carf_brain_injury_rehabilitation_accreditation',
+    'CARF Brain Injury Rehabilitation Program Accreditation',
+    'https://www.carf.org/accreditation/'
+),
+(
+    1602,
+    'certification',
+    'Commission on Accreditation of Rehabilitation Facilities',
+    'https://www.carf.org',
+    'carf_stroke_rehabilitation_accreditation',
+    'CARF Stroke Rehabilitation Program Accreditation',
+    'https://www.carf.org/accreditation/'
+),
+(
+    1603,
+    'certification',
+    'Commission on Accreditation of Rehabilitation Facilities',
+    'https://www.carf.org',
+    'carf_spinal_cord_injury_rehabilitation_accreditation',
+    'CARF Spinal Cord Injury Rehabilitation Program Accreditation',
+    'https://www.carf.org/accreditation/'
+),
+(
+    1604,
+    'certification',
+    'Commission on Accreditation of Rehabilitation Facilities',
+    'https://www.carf.org',
+    'carf_amputation_rehabilitation_accreditation',
+    'CARF Amputation Rehabilitation Program Accreditation',
+    'https://www.carf.org/accreditation/'
+),
+(
+    1605,
+    'certification',
+    'Commission on Accreditation of Rehabilitation Facilities',
+    'https://www.carf.org',
+    'carf_cardiac_rehabilitation_accreditation',
+    'CARF Cardiac Rehabilitation Program Accreditation',
+    'https://www.carf.org/accreditation/'
+),
+(
+    1606,
+    'certification',
+    'Commission on Accreditation of Rehabilitation Facilities',
+    'https://www.carf.org',
+    'carf_pulmonary_rehabilitation_accreditation',
+    'CARF Pulmonary Rehabilitation Program Accreditation',
+    'https://www.carf.org/accreditation/'
+);
+
+
+-- ABA
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1700,
+    'certification',
+    'American Burn Association',
+    'https://ameriburn.org',
+    'aba_adult_burn_center_verification',
+    'ABA Verified Adult Burn Center',
+    'https://ameriburn.org/quality-care/burn-center-verification/'
+),
+(
+    1701,
+    'certification',
+    'American Burn Association',
+    'https://ameriburn.org',
+    'aba_pediatric_burn_center_verification',
+    'ABA Verified Pediatric Burn Center',
+    'https://ameriburn.org/quality-care/burn-center-verification/'
+),
+(
+    1702,
+    'certification',
+    'American Burn Association',
+    'https://ameriburn.org',
+    'aba_combined_burn_center_verification',
+    'ABA Verified Adult and Pediatric Burn Center',
+    'https://ameriburn.org/quality-care/burn-center-verification/'
+);
+
+
+-- Undersea & Hyperbaric Medical Society
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1800,
+    'certification',
+    'Undersea & Hyperbaric Medical Society',
+    'https://www.uhms.org',
+    'uhms_hyperbaric_facility_accreditation',
+    'UHMS Hyperbaric Facility Accreditation',
+    'https://www.uhms.org/accreditation.html'
+);
+
+
+-- Other
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1900,
+    'certification',
+    'American Academy of Sleep Medicine',
+    'https://aasm.org',
+    'aasm_sleep_center_accreditation',
+    'AASM Sleep Center Accreditation',
+    'https://aasm.org/accreditation/'
+),
+(
+    1901,
+    'certification',
+    'AABB',
+    'https://www.aabb.org',
+    'aabb_blood_bank_transfusion_service_accreditation',
+    'AABB Blood Bank / Transfusion Service Accreditation',
+    'https://www.aabb.org/standards-accreditation/accreditation'
+),
+(
+    1902,
+    'certification',
+    'Foundation for the Accreditation of Cellular Therapy',
+    'https://www.factglobal.org',
+    'fact_cellular_therapy_accreditation',
+    'FACT Cellular Therapy Accreditation',
+    'https://www.factglobal.org/accreditation/'
+),
+(
+    1903,
+    'certification',
+    'Intersocietal Accreditation Commission',
+    'https://www.intersocietal.org',
+    'iac_echocardiography_accreditation',
+    'IAC Echocardiography Accreditation',
+    'https://www.intersocietal.org/echo/'
+),
+(
+    1904,
+    'certification',
+    'Intersocietal Accreditation Commission',
+    'https://www.intersocietal.org',
+    'iac_nuclear_pet_accreditation',
+    'IAC Nuclear/PET Accreditation',
+    'https://www.intersocietal.org/nuclear/'
+),
+(
+    1905,
+    'certification',
+    'Intersocietal Accreditation Commission',
+    'https://www.intersocietal.org',
+    'iac_vascular_testing_accreditation',
+    'IAC Vascular Testing Accreditation',
+    'https://www.intersocietal.org/vascular/'
+),
+(
+    1906,
+    'certification',
+    'Intersocietal Accreditation Commission',
+    'https://www.intersocietal.org',
+    'iac_cardiac_ct_accreditation',
+    'IAC Cardiac CT Accreditation',
+    'https://www.intersocietal.org/ct/'
+);
+
+
+-- American College of Cardiology (ACC) Accreditation Services
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1950,
+    'certification',
+    'American College of Cardiology',
+    'https://cvquality.acc.org',
+    'acc_chest_pain_center_accreditation',
+    'ACC Chest Pain Center Accreditation',
+    'https://cvquality.acc.org/accreditation'
+),
+(
+    1951,
+    'certification',
+    'American College of Cardiology',
+    'https://cvquality.acc.org',
+    'acc_heart_failure_accreditation',
+    'ACC Heart Failure Accreditation',
+    'https://cvquality.acc.org/accreditation'
+),
+(
+    1952,
+    'certification',
+    'American College of Cardiology',
+    'https://cvquality.acc.org',
+    'acc_cardiac_cath_lab_accreditation',
+    'ACC Cardiac Catheterization Lab Accreditation',
+    'https://cvquality.acc.org/accreditation'
+),
+(
+    1953,
+    'certification',
+    'American College of Cardiology',
+    'https://cvquality.acc.org',
+    'acc_electrophysiology_lab_accreditation',
+    'ACC Electrophysiology Lab Accreditation',
+    'https://cvquality.acc.org/accreditation'
+),
+(
+    1954,
+    'certification',
+    'American College of Cardiology',
+    'https://cvquality.acc.org',
+    'acc_transcatheter_valve_certification',
+    'ACC Transcatheter Valve Certification',
+    'https://cvquality.acc.org/accreditation'
+),
+(
+    1955,
+    'certification',
+    'American College of Cardiology',
+    'https://cvquality.acc.org',
+    'acc_cardiovascular_imaging_accreditation',
+    'ACC Cardiovascular Imaging Accreditation',
+    'https://cvquality.acc.org/accreditation'
+);
+
+
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1990,
+    'certification',
+    'Planetree International',
+    'https://planetree.org',
+    'planetree_person_centered_care_certification',
+    'Planetree Person-Centered Care Certification',
+    'https://planetree.org/person-centered-care-certification/'
+);
+
+
+-- American College of Emergency Physicians
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1960,
+    'certification',
+    'American College of Emergency Physicians',
+    'https://www.acep.org',
+    'acep_geriatric_emergency_department_level_1_accreditation',
+    'ACEP Level 1 Geriatric Emergency Department Accreditation',
+    'https://www.acep.org/geda/'
+),
+(
+    1961,
+    'certification',
+    'American College of Emergency Physicians',
+    'https://www.acep.org',
+    'acep_geriatric_emergency_department_level_2_accreditation',
+    'ACEP Level 2 Geriatric Emergency Department Accreditation',
+    'https://www.acep.org/geda/'
+),
+(
+    1962,
+    'certification',
+    'American College of Emergency Physicians',
+    'https://www.acep.org',
+    'acep_geriatric_emergency_department_level_3_accreditation',
+    'ACEP Level 3 Geriatric Emergency Department Accreditation',
+    'https://www.acep.org/geda/'
+);
+
+
+-- DNV certifications
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1965,
+    'certification',
+    'Society for Cardiovascular Patient Care',
+    'https://scpc.org',
+    'scpc_chest_pain_center_accreditation',
+    'SCPC Chest Pain Center Accreditation',
+    'https://scpc.org/accreditation/'
+);
+
+
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    1970,
+    'certification',
+    'DNV Healthcare',
+    'https://www.dnv.com',
+    'dnv_primary_stroke_center_certification',
+    'DNV Primary Stroke Center Certification',
+    'https://www.dnv.com/assurance/healthcare/'
+),
+(
+    1971,
+    'certification',
+    'DNV Healthcare',
+    'https://www.dnv.com',
+    'dnv_comprehensive_stroke_center_certification',
+    'DNV Comprehensive Stroke Center Certification',
+    'https://www.dnv.com/assurance/healthcare/'
+),
+(
+    1972,
+    'certification',
+    'DNV Healthcare',
+    'https://www.dnv.com',
+    'dnv_thrombectomy_capable_stroke_center_certification',
+    'DNV Thrombectomy-Capable Stroke Center Certification',
+    'https://www.dnv.com/assurance/healthcare/'
+),
+(
+    1973,
+    'certification',
+    'DNV Healthcare',
+    'https://www.dnv.com',
+    'dnv_acute_stroke_ready_hospital_certification',
+    'DNV Acute Stroke Ready Hospital Certification',
+    'https://www.dnv.com/assurance/healthcare/'
+),
+(
+    1974,
+    'certification',
+    'DNV Healthcare',
+    'https://www.dnv.com',
+    'dnv_orthopedic_center_of_excellence',
+    'DNV Orthopedic Center of Excellence Certification',
+    'https://www.dnv.com/assurance/healthcare/'
+),
+(
+    1975,
+    'certification',
+    'DNV Healthcare',
+    'https://www.dnv.com',
+    'dnv_spine_surgery_center_of_excellence',
+    'DNV Spine Surgery Center of Excellence Certification',
+    'https://www.dnv.com/assurance/healthcare/'
+),
+(
+    1976,
+    'certification',
+    'DNV Healthcare',
+    'https://www.dnv.com',
+    'dnv_hip_knee_replacement_center_of_excellence',
+    'DNV Hip and Knee Replacement Center of Excellence Certification',
+    'https://www.dnv.com/assurance/healthcare/'
+);

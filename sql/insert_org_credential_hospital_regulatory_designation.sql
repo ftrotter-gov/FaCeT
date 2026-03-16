@@ -1,0 +1,103 @@
+-- Hospital org credentials: regulatory_designation
+-- Split from insert_org_credential_hospital.sql
+
+-- CMS designations
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    4000,
+    'regulatory_designation',
+    'Centers for Medicare & Medicaid Services',
+    'https://www.cms.gov',
+    'critical_access_hospital',
+    'Critical Access Hospital (CAH)',
+    'https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals'
+),
+(
+    4001,
+    'regulatory_designation',
+    'Centers for Medicare & Medicaid Services',
+    'https://www.cms.gov',
+    'sole_community_hospital',
+    'Sole Community Hospital (SCH)',
+    'https://www.cms.gov/medicare/medicare-provider-enrollment-and-certifications/medicare-provider-id-reassignment/sole-community-hospital'
+),
+(
+    4002,
+    'regulatory_designation',
+    'Centers for Medicare & Medicaid Services',
+    'https://www.cms.gov',
+    'pps_exempt_cancer_hospital',
+    'PPS-Exempt Cancer Hospital (Prospective Payment System-Exempt Cancer Hospital)',
+    'https://www.cms.gov/medicare/quality-initiatives-patient-assessment-instruments/pps-exempt-cancer-hospital-quality-reporting-pchqr-program'
+),
+(
+    4003,
+    'regulatory_designation',
+    'Centers for Medicare & Medicaid Services',
+    'https://www.cms.gov',
+    'disproportionate_share_hospital',
+    'Disproportionate Share Hospital (DSH) Status',
+    'https://www.cms.gov/medicare/medicare-fee-for-service-payment/hospital-inpatient/acute-inpatientpps'
+),
+(
+    4004,
+    'regulatory_designation',
+    'Centers for Medicare & Medicaid Services',
+    'https://www.cms.gov',
+    'rural_referral_center',
+    'Rural Referral Center (RRC)',
+    'https://www.cms.gov/medicare/medicare-fee-for-service-payment/hospital-inpatient/acute-inpatientpps'
+),
+(
+    4005,
+    'regulatory_designation',
+    'Centers for Medicare & Medicaid Services',
+    'https://www.cms.gov',
+    'medicare_dependent_hospital',
+    'Medicare-Dependent Hospital (MDH)',
+    'https://www.cms.gov/medicare/medicare-fee-for-service-payment/hospital-inpatient/acute-inpatientpps'
+),
+(
+    4006,
+    'regulatory_designation',
+    'Centers for Medicare & Medicaid Services',
+    'https://www.cms.gov',
+    'essential_access_community_hospital',
+    'Essential Access Community Hospital (EACH)',
+    'https://www.cms.gov/medicare/medicare-fee-for-service-payment/hospital-inpatient/acute-inpatientpps'
+),
+(
+    4007,
+    'regulatory_designation',
+    'Health Resources & Services Administration (HRSA)',
+    'https://www.hrsa.gov',
+    '340b_covered_entity',
+    '340B Covered Entity',
+    'https://www.hrsa.gov/opa/index.html'
+),
+(
+    4008,
+    'regulatory_designation',
+    'Centers for Medicare & Medicaid Services',
+    'https://www.cms.gov',
+    'childrens_hospital_designation',
+    'Children''s Hospital (Medicare classification / regulatory recognition)',
+    'https://www.cms.gov/medicare/quality-initiatives-patient-assessment-instruments/hospitalqualityinits'
+),
+(
+    4009,
+    'regulatory_designation',
+    'Centers for Medicare & Medicaid Services',
+    'https://www.cms.gov',
+    'physician_owned_hospital_restriction',
+    'Physician-Owned Hospital (Medicare Participation Restricted Under Stark Law)',
+    'https://www.cms.gov/Medicare/Fraud-and-Abuse/PhysicianSelfReferral/Physician_Owned_Hospitals'
+);
