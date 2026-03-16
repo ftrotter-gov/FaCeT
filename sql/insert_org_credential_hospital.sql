@@ -1396,3 +1396,239 @@ INSERT INTO org_credential (
     'DNV Hip and Knee Replacement Center of Excellence Certification',
     'https://www.dnv.com/assurance/healthcare/'
 );
+
+-- Trauma Centers
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    3000,
+    'designation',
+    'American College of Surgeons',
+    'https://www.facs.org',
+    'trauma_center_level_1',
+    'Level I Trauma Center',
+    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/'
+),
+(
+    3001,
+    'designation',
+    'American College of Surgeons',
+    'https://www.facs.org',
+    'trauma_center_level_2',
+    'Level II Trauma Center',
+    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/'
+),
+(
+    3002,
+    'designation',
+    'American College of Surgeons',
+    'https://www.facs.org',
+    'trauma_center_level_3',
+    'Level III Trauma Center',
+    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/'
+),
+(
+    3003,
+    'designation',
+    'American College of Surgeons',
+    'https://www.facs.org',
+    'trauma_center_level_4',
+    'Level IV Trauma Center',
+    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/'
+);
+
+
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    3005,
+    'designation',
+    'Association of American Medical Colleges',
+    'https://www.aamc.org',
+    'academic_medical_center',
+    'Academic Medical Center',
+    'https://www.aamc.org/what-we-do/mission-areas/academic-medicine'
+);
+
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    3006,
+    'designation',
+    'Centers for Medicare & Medicaid Services',
+    'https://www.cms.gov',
+    'teaching_hospital',
+    'Teaching Hospital',
+    'https://www.cms.gov/medicare/payment/prospective-payment-systems/acute-inpatient-pps/indirect-medical-education-ime'
+),
+(
+    3007,
+    'designation',
+    'Centers for Medicare & Medicaid Services',
+    'https://www.cms.gov',
+    'major_teaching_hospital',
+    'Major Teaching Hospital',
+    'https://www.cms.gov/medicare/payment/prospective-payment-systems/acute-inpatient-pps/indirect-medical-education-ime'
+);
+
+
+-- American Burn Association
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    3010,
+    'designation',
+    'American Burn Association',
+    'https://ameriburn.org',
+    'burn_center_adult',
+    'Adult Burn Center',
+    'https://ameriburn.org/quality-care/burn-center-verification/'
+),
+(
+    3011,
+    'designation',
+    'American Burn Association',
+    'https://ameriburn.org',
+    'burn_center_pediatric',
+    'Pediatric Burn Center',
+    'https://ameriburn.org/quality-care/burn-center-verification/'
+),
+(
+    3012,
+    'designation',
+    'American Burn Association',
+    'https://ameriburn.org',
+    'burn_center_adult_pediatric',
+    'Adult and Pediatric Burn Center',
+    'https://ameriburn.org/quality-care/burn-center-verification/'
+);
+
+-- CMS designations
+INSERT INTO org_credential (
+    id,
+    category,
+    issuer,
+    issuer_url,
+    credential_type,
+    display,
+    credential_url
+) VALUES
+(
+    4000,
+    'regulatory_designation',
+    'Centers for Medicare & Medicaid Services',
+    'https://www.cms.gov',
+    'critical_access_hospital',
+    'Critical Access Hospital (CAH)',
+    'https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals'
+),
+(
+    4001,
+    'regulatory_designation',
+    'Centers for Medicare & Medicaid Services',
+    'https://www.cms.gov',
+    'sole_community_hospital',
+    'Sole Community Hospital (SCH)',
+    'https://www.cms.gov/medicare/medicare-provider-enrollment-and-certifications/medicare-provider-id-reassignment/sole-community-hospital'
+),
+(
+    4002,
+    'regulatory_designation',
+    'Centers for Medicare & Medicaid Services',
+    'https://www.cms.gov',
+    'pps_exempt_cancer_hospital',
+    'PPS-Exempt Cancer Hospital (Prospective Payment System-Exempt Cancer Hospital)',
+    'https://www.cms.gov/medicare/quality-initiatives-patient-assessment-instruments/pps-exempt-cancer-hospital-quality-reporting-pchqr-program'
+),
+(
+    4003,
+    'regulatory_designation',
+    'Centers for Medicare & Medicaid Services',
+    'https://www.cms.gov',
+    'disproportionate_share_hospital',
+    'Disproportionate Share Hospital (DSH) Status',
+    'https://www.cms.gov/medicare/medicare-fee-for-service-payment/hospital-inpatient/acute-inpatientpps'
+),
+(
+    4004,
+    'regulatory_designation',
+    'Centers for Medicare & Medicaid Services',
+    'https://www.cms.gov',
+    'rural_referral_center',
+    'Rural Referral Center (RRC)',
+    'https://www.cms.gov/medicare/medicare-fee-for-service-payment/hospital-inpatient/acute-inpatientpps'
+),
+(
+    4005,
+    'regulatory_designation',
+    'Centers for Medicare & Medicaid Services',
+    'https://www.cms.gov',
+    'medicare_dependent_hospital',
+    'Medicare-Dependent Hospital (MDH)',
+    'https://www.cms.gov/medicare/medicare-fee-for-service-payment/hospital-inpatient/acute-inpatientpps'
+),
+(
+    4006,
+    'regulatory_designation',
+    'Centers for Medicare & Medicaid Services',
+    'https://www.cms.gov',
+    'essential_access_community_hospital',
+    'Essential Access Community Hospital (EACH)',
+    'https://www.cms.gov/medicare/medicare-fee-for-service-payment/hospital-inpatient/acute-inpatientpps'
+),
+(
+    4007,
+    'regulatory_designation',
+    'Health Resources & Services Administration (HRSA)',
+    'https://www.hrsa.gov',
+    '340b_covered_entity',
+    '340B Covered Entity',
+    'https://www.hrsa.gov/opa/index.html'
+),
+(
+    4008,
+    'regulatory_designation',
+    'Centers for Medicare & Medicaid Services',
+    'https://www.cms.gov',
+    'childrens_hospital_designation',
+    'Children''s Hospital (Medicare classification / regulatory recognition)',
+    'https://www.cms.gov/medicare/quality-initiatives-patient-assessment-instruments/hospitalqualityinits'
+),
+(
+    4009,
+    'regulatory_designation',
+    'Centers for Medicare & Medicaid Services',
+    'https://www.cms.gov',
+    'physician_owned_hospital_restriction',
+    'Physician-Owned Hospital (Medicare Participation Restricted Under Stark Law)',
+    'https://www.cms.gov/Medicare/Fraud-and-Abuse/PhysicianSelfReferral/Physician_Owned_Hospitals'
+);
+
