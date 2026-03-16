@@ -1,5 +1,5 @@
 
-CREATE TABLE org_credential (
+CREATE TABLE IF NOT EXISTS org_credential (
     id BIGINT PRIMARY KEY,
     category TEXT NOT NULL,
     issuer TEXT NOT NULL,
