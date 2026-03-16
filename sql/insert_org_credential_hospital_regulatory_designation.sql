@@ -1,8 +1,8 @@
 -- Hospital org credentials: regulatory_designation
--- Split from insert_org_credential_hospital.sql
+-- Split from insert_dctnry.org_credential_hospital.sql
 
 -- CMS designations
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,

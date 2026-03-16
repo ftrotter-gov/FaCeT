@@ -1,5 +1,5 @@
 -- AHHC
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,

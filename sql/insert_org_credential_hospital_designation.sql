@@ -1,8 +1,8 @@
 -- Hospital org credentials: designation
--- Split from insert_org_credential_hospital.sql
+-- Split from insert_dctnry.org_credential_hospital.sql
 
 -- NCI
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
@@ -57,7 +57,7 @@ INSERT INTO org_credential (
 
 
 -- Trauma Centers
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
@@ -124,7 +124,7 @@ INSERT INTO org_credential (
 );
 
 
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
@@ -152,7 +152,7 @@ INSERT INTO org_credential (
 );
 
 
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
@@ -194,7 +194,7 @@ INSERT INTO org_credential (
 
 
 -- American Burn Association
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,

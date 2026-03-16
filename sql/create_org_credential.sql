@@ -1,5 +1,5 @@
 
-CREATE TABLE IF NOT EXISTS org_credential (
+CREATE TABLE IF NOT EXISTS dctnry.org_credential (
     id BIGINT PRIMARY KEY,
     category TEXT NOT NULL,
     issuer TEXT NOT NULL,
@@ -13,5 +13,5 @@ CREATE TABLE IF NOT EXISTS org_credential (
     updated_at TIMESTAMPTZ
 );
 
-CREATE INDEX org_credential_category_idx ON org_credential(category);
-CREATE INDEX org_credential_issuer_idx ON org_credential(issuer);
+CREATE INDEX org_credential_category_idx ON dctnry.org_credential(category);
+CREATE INDEX org_credential_issuer_idx ON dctnry.org_credential(issuer);

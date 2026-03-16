@@ -1,8 +1,8 @@
 -- Hospital org credentials: certification
--- Split from insert_org_credential_hospital.sql
+-- Split from insert_dctnry.org_credential_hospital.sql
 
 -- Joint Commission Certifications
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
@@ -694,7 +694,7 @@ INSERT INTO org_credential (
 
 
 -- American College of Surgeons
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
@@ -827,7 +827,7 @@ INSERT INTO org_credential (
 
 
 -- American Heart Association
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
@@ -908,7 +908,7 @@ INSERT INTO org_credential (
 
 
 -- American College of Radiology
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
@@ -1041,7 +1041,7 @@ INSERT INTO org_credential (
 
 
 -- American Nurses Credentialing Center
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
@@ -1083,7 +1083,7 @@ INSERT INTO org_credential (
 
 
 -- Baby Friendly
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
@@ -1112,7 +1112,7 @@ INSERT INTO org_credential (
 
 
 -- CARF
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
@@ -1219,7 +1219,7 @@ INSERT INTO org_credential (
 
 
 -- ABA
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
@@ -1274,7 +1274,7 @@ INSERT INTO org_credential (
 
 
 -- Undersea & Hyperbaric Medical Society
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
@@ -1303,7 +1303,7 @@ INSERT INTO org_credential (
 
 
 -- Other
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
@@ -1410,7 +1410,7 @@ INSERT INTO org_credential (
 
 
 -- American College of Cardiology (ACC) Accreditation Services
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
@@ -1503,7 +1503,7 @@ INSERT INTO org_credential (
 );
 
 
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
@@ -1532,7 +1532,7 @@ INSERT INTO org_credential (
 
 
 -- American College of Emergency Physicians
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
@@ -1587,7 +1587,7 @@ INSERT INTO org_credential (
 
 
 -- DNV certifications
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
@@ -1615,7 +1615,7 @@ INSERT INTO org_credential (
 );
 
 
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,

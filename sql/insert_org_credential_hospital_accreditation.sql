@@ -1,8 +1,8 @@
 -- Hospital org credentials: accreditation
--- Split from insert_org_credential_hospital.sql
+-- Split from insert_dctnry.org_credential_hospital.sql
 
 -- Joint Commisssion Accreditations
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
@@ -122,7 +122,7 @@ INSERT INTO org_credential (
 
 
 -- DNV Healthcare
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
@@ -177,7 +177,7 @@ INSERT INTO org_credential (
 
 
 -- ACHC
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
@@ -219,7 +219,7 @@ INSERT INTO org_credential (
 
 
 -- CIHQ
-INSERT INTO org_credential (
+INSERT INTO dctnry.org_credential (
     id,
     category,
     issuer,
