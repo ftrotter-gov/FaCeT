@@ -1,6 +1,0 @@
--- NOTE: This file was split into category-specific files to keep sizes manageable.
--- Use these files instead (they are all merged by merge_sql.py automatically):
---   - insert_org_credential_hospital_accreditation.sql
---   - insert_org_credential_hospital_certification.sql
---   - insert_org_credential_hospital_designation.sql
---   - insert_org_credential_hospital_regulatory_designation.sql
