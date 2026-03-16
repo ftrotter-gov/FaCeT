@@ -9,7 +9,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
     (
         1000,
@@ -18,7 +22,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_acute_myocardial_infarction_certification',
         'Joint Commission Acute Myocardial Infarction Certification',
-        'https://www.jointcommission.org/en-us/certification/cardiac'
+        'https://www.jointcommission.org/en-us/certification/cardiac',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1001,
@@ -27,7 +35,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_chest_pain_certification',
         'Joint Commission Chest Pain Certification',
-        'https://www.jointcommission.org/en-us/certification/cardiac'
+        'https://www.jointcommission.org/en-us/certification/cardiac',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1002,
@@ -36,7 +48,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_heart_failure_certification',
         'Joint Commission Heart Failure Certification',
-        'https://www.jointcommission.org/en-us/certification/cardiac'
+        'https://www.jointcommission.org/en-us/certification/cardiac',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1003,
@@ -45,7 +61,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_comprehensive_cardiac_center_certification',
         'Joint Commission Comprehensive Cardiac Center Certification',
-        'https://www.jointcommission.org/en-us/certification/cardiac'
+        'https://www.jointcommission.org/en-us/certification/cardiac',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1004,
@@ -54,7 +74,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_comprehensive_heart_attack_center_certification',
         'Joint Commission Comprehensive Heart Attack Center Certification',
-        'https://www.jointcommission.org/en-us/certification/cardiac'
+        'https://www.jointcommission.org/en-us/certification/cardiac',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1005,
@@ -63,7 +87,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_advanced_heart_failure_certification',
         'Joint Commission Advanced Heart Failure Certification',
-        'https://www.jointcommission.org/en-us/certification/cardiac'
+        'https://www.jointcommission.org/en-us/certification/cardiac',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1006,
@@ -72,7 +100,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_acute_heart_attack_ready_certification',
         'Joint Commission Acute Heart Attack Ready Certification',
-        'https://www.jointcommission.org/en-us/certification/cardiac'
+        'https://www.jointcommission.org/en-us/certification/cardiac',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1007,
@@ -81,7 +113,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_primary_heart_attack_center_certification',
         'Joint Commission Primary Heart Attack Center Certification',
-        'https://www.jointcommission.org/en-us/certification/cardiac'
+        'https://www.jointcommission.org/en-us/certification/cardiac',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1008,
@@ -90,7 +126,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_ventricular_assist_device_certification',
         'Joint Commission Ventricular Assist Device Certification',
-        'https://www.jointcommission.org/en-us/certification/cardiac'
+        'https://www.jointcommission.org/en-us/certification/cardiac',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1009,
@@ -99,7 +139,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_centralized_sterilization_services_certification',
         'Joint Commission Centralized Sterilization Services Certification',
-        'https://www.jointcommission.org/en-us/certification/centralized-sterilization-services'
+        'https://www.jointcommission.org/en-us/certification/centralized-sterilization-services',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1010,
@@ -108,7 +152,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_advanced_inpatient_diabetes_certification',
         'Joint Commission Advanced Inpatient Diabetes Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1011,
@@ -117,7 +165,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_bariatric_surgery_certification',
         'Joint Commission Bariatric Surgery Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1012,
@@ -126,7 +178,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_brain_tumor_certification',
         'Joint Commission Brain Tumor Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1013,
@@ -135,7 +191,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_lung_cancer_certification',
         'Joint Commission Lung Cancer Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1014,
@@ -144,7 +204,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_sepsis_certification',
         'Joint Commission Sepsis Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1015,
@@ -153,7 +217,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_wound_care_certification',
         'Joint Commission Wound Care Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1016,
@@ -162,7 +230,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_pneumonia_certification',
         'Joint Commission Pneumonia Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1017,
@@ -171,7 +243,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_tuberculosis_certification',
         'Joint Commission Tuberculosis Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1018,
@@ -180,7 +256,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_medication_compounding_certification',
         'Joint Commission Medication Compounding Certification',
-        'https://www.jointcommission.org/en-us/certification/medication-compounding'
+        'https://www.jointcommission.org/en-us/certification/medication-compounding',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1019,
@@ -189,7 +269,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_hip_fracture_certification',
         'Joint Commission Hip Fracture Certification',
-        'https://www.jointcommission.org/en-us/certification/orthopedic'
+        'https://www.jointcommission.org/en-us/certification/orthopedic',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1020,
@@ -198,7 +282,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_joint_replacement_hip_certification',
         'Joint Commission Joint Replacement (Hip) Certification',
-        'https://www.jointcommission.org/en-us/certification/orthopedic'
+        'https://www.jointcommission.org/en-us/certification/orthopedic',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1021,
@@ -207,7 +295,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_joint_replacement_knee_certification',
         'Joint Commission Joint Replacement (Knee) Certification',
-        'https://www.jointcommission.org/en-us/certification/orthopedic'
+        'https://www.jointcommission.org/en-us/certification/orthopedic',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1022,
@@ -216,7 +308,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_joint_replacement_shoulder_certification',
         'Joint Commission Joint Replacement (Shoulder) Certification',
-        'https://www.jointcommission.org/en-us/certification/orthopedic'
+        'https://www.jointcommission.org/en-us/certification/orthopedic',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1023,
@@ -225,7 +321,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_spinal_fusion_certification',
         'Joint Commission Spinal Fusion Certification',
-        'https://www.jointcommission.org/en-us/certification/orthopedic'
+        'https://www.jointcommission.org/en-us/certification/orthopedic',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1024,
@@ -234,7 +334,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_spine_surgery_certification',
         'Joint Commission Spine Surgery Certification',
-        'https://www.jointcommission.org/en-us/certification/orthopedic'
+        'https://www.jointcommission.org/en-us/certification/orthopedic',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1025,
@@ -243,7 +347,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_advanced_spine_surgery_certification',
         'Joint Commission Advanced Spine Surgery Certification',
-        'https://www.jointcommission.org/en-us/certification/orthopedic'
+        'https://www.jointcommission.org/en-us/certification/orthopedic',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1026,
@@ -252,7 +360,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_advanced_total_hip_knee_replacement_certification',
         'Joint Commission Advanced Total Hip and Knee Replacement Certification',
-        'https://www.jointcommission.org/en-us/certification/orthopedic'
+        'https://www.jointcommission.org/en-us/certification/orthopedic',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1027,
@@ -261,7 +373,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_palliative_care_certification',
         'Joint Commission Palliative Care Certification',
-        'https://www.jointcommission.org/en-us/certification/palliative-care'
+        'https://www.jointcommission.org/en-us/certification/palliative-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1028,
@@ -270,7 +386,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_patient_blood_management_certification',
         'Joint Commission Patient Blood Management Certification',
-        'https://www.jointcommission.org/en-us/certification/patient-blood-management'
+        'https://www.jointcommission.org/en-us/certification/patient-blood-management',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1029,
@@ -279,7 +399,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_pediatric_asthma_certification',
         'Joint Commission Pediatric Asthma Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1030,
@@ -288,7 +412,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_outcomes_driven_perinatal_care_certification',
         'Joint Commission Outcomes-Driven Certification in Perinatal Care',
-        'https://www.jointcommission.org/en-us/certification/perinatal-care'
+        'https://www.jointcommission.org/en-us/certification/perinatal-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1031,
@@ -297,7 +425,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_advanced_perinatal_care_certification',
         'Joint Commission Advanced Certification in Perinatal Care',
-        'https://www.jointcommission.org/en-us/certification/perinatal-care'
+        'https://www.jointcommission.org/en-us/certification/perinatal-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1032,
@@ -306,7 +438,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_amputee_rehabilitation_certification',
         'Joint Commission Amputee Rehabilitation Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1033,
@@ -315,7 +451,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_brain_injury_rehabilitation_certification',
         'Joint Commission Brain Injury Rehabilitation Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1034,
@@ -324,7 +464,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_cardiac_rehabilitation_certification',
         'Joint Commission Cardiac Rehabilitation Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1035,
@@ -333,7 +477,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_hip_fracture_rehabilitation_certification',
         'Joint Commission Hip Fracture Rehabilitation Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1036,
@@ -342,7 +490,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_parkinsons_disease_rehabilitation_certification',
         'Joint Commission Parkinson''s Disease Rehabilitation Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1037,
@@ -351,7 +503,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_pulmonary_rehabilitation_certification',
         'Joint Commission Pulmonary Rehabilitation Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1038,
@@ -360,7 +516,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_spinal_cord_injury_rehabilitation_certification',
         'Joint Commission Spinal Cord Injury Rehabilitation Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1039,
@@ -369,7 +529,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_stroke_rehabilitation_certification',
         'Joint Commission Stroke Rehabilitation Certification',
-        'https://www.jointcommission.org/en-us/certification/stroke'
+        'https://www.jointcommission.org/en-us/certification/stroke',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1040,
@@ -378,7 +542,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_copd_certification',
         'Joint Commission COPD Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1041,
@@ -387,7 +555,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_integrated_care_certification',
         'Joint Commission Integrated Care Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1042,
@@ -396,7 +568,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_respiratory_failure_certification',
         'Joint Commission Respiratory Failure Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1043,
@@ -405,7 +581,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_lung_volume_reduction_surgery_certification',
         'Joint Commission Lung Volume Reduction Surgery Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1044,
@@ -414,7 +594,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_advanced_copd_certification',
         'Joint Commission Advanced COPD Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1045,
@@ -423,7 +607,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_chronic_kidney_disease_certification',
         'Joint Commission Chronic Kidney Disease Certification',
-        'https://www.jointcommission.org/en-us/certification/disease-specific-care'
+        'https://www.jointcommission.org/en-us/certification/disease-specific-care',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1046,
@@ -432,7 +620,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_acute_stroke_ready_hospital_certification',
         'Joint Commission Acute Stroke Ready Hospital Certification',
-        'https://www.jointcommission.org/en-us/certification/stroke'
+        'https://www.jointcommission.org/en-us/certification/stroke',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1047,
@@ -441,7 +633,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_comprehensive_stroke_center_certification',
         'Joint Commission Comprehensive Stroke Center Certification',
-        'https://www.jointcommission.org/en-us/certification/stroke'
+        'https://www.jointcommission.org/en-us/certification/stroke',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1048,
@@ -450,7 +646,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_primary_stroke_center_certification',
         'Joint Commission Primary Stroke Center Certification',
-        'https://www.jointcommission.org/en-us/certification/stroke'
+        'https://www.jointcommission.org/en-us/certification/stroke',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1049,
@@ -459,7 +659,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_thrombectomy_capable_stroke_center_certification',
         'Joint Commission Thrombectomy-Capable Stroke Center Certification',
-        'https://www.jointcommission.org/en-us/certification/stroke'
+        'https://www.jointcommission.org/en-us/certification/stroke',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1050,
@@ -468,7 +672,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_primary_care_medical_home_certification',
         'Joint Commission Primary Care Medical Home Certification',
-        'https://www.jointcommission.org/en-us/certification/primary-care-medical-home'
+        'https://www.jointcommission.org/en-us/certification/primary-care-medical-home',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         1051,
@@ -477,7 +685,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_responsible_use_of_health_data_certification',
         'Joint Commission Responsible Use of Health Data Certification',
-        'https://www.jointcommission.org/en-us/certification/responsible-use-of-health-data'
+        'https://www.jointcommission.org/en-us/certification/responsible-use-of-health-data',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     );
 
 
@@ -489,7 +701,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
 (
     1100,
@@ -498,7 +714,11 @@ INSERT INTO org_credential (
     'https://www.facs.org',
     'acs_trauma_center_level_1_verification',
     'ACS Level I Trauma Center Verification',
-    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/'
+    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1101,
@@ -507,7 +727,11 @@ INSERT INTO org_credential (
     'https://www.facs.org',
     'acs_trauma_center_level_2_verification',
     'ACS Level II Trauma Center Verification',
-    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/'
+    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1102,
@@ -516,7 +740,11 @@ INSERT INTO org_credential (
     'https://www.facs.org',
     'acs_trauma_center_level_3_verification',
     'ACS Level III Trauma Center Verification',
-    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/'
+    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1103,
@@ -525,7 +753,11 @@ INSERT INTO org_credential (
     'https://www.facs.org',
     'acs_trauma_center_level_4_verification',
     'ACS Level IV Trauma Center Verification',
-    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/'
+    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1104,
@@ -534,7 +766,11 @@ INSERT INTO org_credential (
     'https://www.facs.org',
     'acs_commission_on_cancer_accreditation',
     'ACS Commission on Cancer Accredited Program',
-    'https://www.facs.org/quality-programs/cancer-programs/commission-on-cancer/'
+    'https://www.facs.org/quality-programs/cancer-programs/commission-on-cancer/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1105,
@@ -543,7 +779,11 @@ INSERT INTO org_credential (
     'https://www.facs.org',
     'acs_breast_center_accreditation',
     'ACS National Accreditation Program for Breast Centers (NAPBC)',
-    'https://www.facs.org/quality-programs/cancer-programs/national-accreditation-program-for-breast-centers/'
+    'https://www.facs.org/quality-programs/cancer-programs/national-accreditation-program-for-breast-centers/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1106,
@@ -552,7 +792,11 @@ INSERT INTO org_credential (
     'https://www.facs.org',
     'acs_rectal_cancer_program_accreditation',
     'ACS National Accreditation Program for Rectal Cancer (NAPRC)',
-    'https://www.facs.org/quality-programs/cancer-programs/national-accreditation-program-for-rectal-cancer/'
+    'https://www.facs.org/quality-programs/cancer-programs/national-accreditation-program-for-rectal-cancer/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1107,
@@ -561,7 +805,11 @@ INSERT INTO org_credential (
     'https://www.facs.org',
     'acs_bariatric_surgery_center_accreditation',
     'ACS MBSAQIP Accredited Bariatric Surgery Center',
-    'https://www.facs.org/quality-programs/mbsaqip/'
+    'https://www.facs.org/quality-programs/mbsaqip/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1108,
@@ -570,7 +818,11 @@ INSERT INTO org_credential (
     'https://www.facs.org',
     'acs_childrens_surgery_center_verification',
     'ACS Children''s Surgery Center Verification',
-    'https://www.facs.org/quality-programs/childrens-surgery-verification/'
+    'https://www.facs.org/quality-programs/childrens-surgery-verification/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 );
 
 
@@ -582,7 +834,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
 (
     1200,
@@ -591,7 +847,11 @@ INSERT INTO org_credential (
     'https://www.heart.org',
     'aha_cardiac_care_certification',
     'American Heart Association Cardiac Care Certification',
-    'https://www.heart.org/en/professional/quality-improvement/healthcare-certification'
+    'https://www.heart.org/en/professional/quality-improvement/healthcare-certification',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1201,
@@ -600,7 +860,11 @@ INSERT INTO org_credential (
     'https://www.heart.org',
     'aha_heart_failure_certification',
     'American Heart Association Heart Failure Certification',
-    'https://www.heart.org/en/professional/quality-improvement/healthcare-certification'
+    'https://www.heart.org/en/professional/quality-improvement/healthcare-certification',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1202,
@@ -609,7 +873,11 @@ INSERT INTO org_credential (
     'https://www.heart.org',
     'aha_acute_coronary_syndrome_certification',
     'American Heart Association Acute Coronary Syndrome Certification',
-    'https://www.heart.org/en/professional/quality-improvement/healthcare-certification'
+    'https://www.heart.org/en/professional/quality-improvement/healthcare-certification',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1203,
@@ -618,7 +886,11 @@ INSERT INTO org_credential (
     'https://www.heart.org',
     'aha_stroke_system_of_care_certification',
     'American Heart Association Stroke System of Care Certification',
-    'https://www.heart.org/en/professional/quality-improvement/healthcare-certification'
+    'https://www.heart.org/en/professional/quality-improvement/healthcare-certification',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1204,
@@ -627,7 +899,11 @@ INSERT INTO org_credential (
     'https://www.heart.org',
     'aha_cardiac_rehabilitation_certification',
     'American Heart Association Cardiac Rehabilitation Certification',
-    'https://www.heart.org/en/professional/quality-improvement/healthcare-certification'
+    'https://www.heart.org/en/professional/quality-improvement/healthcare-certification',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 );
 
 
@@ -639,7 +915,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
 (
     1300,
@@ -648,7 +928,11 @@ INSERT INTO org_credential (
     'https://www.acr.org',
     'acr_computed_tomography_accreditation',
     'ACR Computed Tomography (CT) Accreditation',
-    'https://www.acraccreditation.org/modalities/ct'
+    'https://www.acraccreditation.org/modalities/ct',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1301,
@@ -657,7 +941,11 @@ INSERT INTO org_credential (
     'https://www.acr.org',
     'acr_magnetic_resonance_imaging_accreditation',
     'ACR Magnetic Resonance Imaging (MRI) Accreditation',
-    'https://www.acraccreditation.org/modalities/mri'
+    'https://www.acraccreditation.org/modalities/mri',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1302,
@@ -666,7 +954,11 @@ INSERT INTO org_credential (
     'https://www.acr.org',
     'acr_mammography_accreditation',
     'ACR Mammography Accreditation',
-    'https://www.acraccreditation.org/modalities/mammography'
+    'https://www.acraccreditation.org/modalities/mammography',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1303,
@@ -675,7 +967,11 @@ INSERT INTO org_credential (
     'https://www.acr.org',
     'acr_nuclear_medicine_accreditation',
     'ACR Nuclear Medicine Accreditation',
-    'https://www.acraccreditation.org/modalities/nuclear-medicine'
+    'https://www.acraccreditation.org/modalities/nuclear-medicine',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1304,
@@ -684,7 +980,11 @@ INSERT INTO org_credential (
     'https://www.acr.org',
     'acr_pet_accreditation',
     'ACR PET Accreditation',
-    'https://www.acraccreditation.org/modalities/pet'
+    'https://www.acraccreditation.org/modalities/pet',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1305,
@@ -693,7 +993,11 @@ INSERT INTO org_credential (
     'https://www.acr.org',
     'acr_radiation_oncology_accreditation',
     'ACR Radiation Oncology Accreditation',
-    'https://www.acraccreditation.org/modalities/radiation-oncology'
+    'https://www.acraccreditation.org/modalities/radiation-oncology',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1306,
@@ -702,7 +1006,11 @@ INSERT INTO org_credential (
     'https://www.acr.org',
     'acr_stereotactic_breast_biopsy_accreditation',
     'ACR Stereotactic Breast Biopsy Accreditation',
-    'https://www.acraccreditation.org/modalities/stereotactic-breast-biopsy'
+    'https://www.acraccreditation.org/modalities/stereotactic-breast-biopsy',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1307,
@@ -711,7 +1019,11 @@ INSERT INTO org_credential (
     'https://www.acr.org',
     'acr_ultrasound_accreditation',
     'ACR Ultrasound Accreditation',
-    'https://www.acraccreditation.org/modalities/ultrasound'
+    'https://www.acraccreditation.org/modalities/ultrasound',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1308,
@@ -720,7 +1032,11 @@ INSERT INTO org_credential (
     'https://www.acr.org',
     'acr_breast_imaging_center_of_excellence',
     'ACR Breast Imaging Center of Excellence',
-    'https://www.acraccreditation.org/accreditation/bicoe'
+    'https://www.acraccreditation.org/accreditation/bicoe',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 );
 
 
@@ -732,7 +1048,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
 (
     1400,
@@ -741,7 +1061,11 @@ INSERT INTO org_credential (
     'https://www.nursingworld.org/ancc',
     'ancc_magnet_recognition',
     'ANCC Magnet Recognition Program',
-    'https://www.nursingworld.org/organizational-programs/magnet/'
+    'https://www.nursingworld.org/organizational-programs/magnet/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1401,
@@ -750,7 +1074,11 @@ INSERT INTO org_credential (
     'https://www.nursingworld.org/ancc',
     'ancc_pathway_to_excellence',
     'ANCC Pathway to Excellence Designation',
-    'https://www.nursingworld.org/organizational-programs/pathway/'
+    'https://www.nursingworld.org/organizational-programs/pathway/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 );
 
 
@@ -762,7 +1090,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
 (
     1500,
@@ -771,7 +1103,11 @@ INSERT INTO org_credential (
     'https://www.babyfriendlyusa.org',
     'bfusa_baby_friendly_hospital_designation',
     'Baby-Friendly Hospital Designation',
-    'https://www.babyfriendlyusa.org/for-facilities/'
+    'https://www.babyfriendlyusa.org/for-facilities/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 );
 
 
@@ -783,7 +1119,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
 (
     1600,
@@ -792,7 +1132,11 @@ INSERT INTO org_credential (
     'https://www.carf.org',
     'carf_inpatient_rehabilitation_accreditation',
     'CARF Inpatient Rehabilitation Program Accreditation',
-    'https://www.carf.org/accreditation/'
+    'https://www.carf.org/accreditation/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1601,
@@ -801,7 +1145,11 @@ INSERT INTO org_credential (
     'https://www.carf.org',
     'carf_brain_injury_rehabilitation_accreditation',
     'CARF Brain Injury Rehabilitation Program Accreditation',
-    'https://www.carf.org/accreditation/'
+    'https://www.carf.org/accreditation/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1602,
@@ -810,7 +1158,11 @@ INSERT INTO org_credential (
     'https://www.carf.org',
     'carf_stroke_rehabilitation_accreditation',
     'CARF Stroke Rehabilitation Program Accreditation',
-    'https://www.carf.org/accreditation/'
+    'https://www.carf.org/accreditation/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1603,
@@ -819,7 +1171,11 @@ INSERT INTO org_credential (
     'https://www.carf.org',
     'carf_spinal_cord_injury_rehabilitation_accreditation',
     'CARF Spinal Cord Injury Rehabilitation Program Accreditation',
-    'https://www.carf.org/accreditation/'
+    'https://www.carf.org/accreditation/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1604,
@@ -828,7 +1184,11 @@ INSERT INTO org_credential (
     'https://www.carf.org',
     'carf_amputation_rehabilitation_accreditation',
     'CARF Amputation Rehabilitation Program Accreditation',
-    'https://www.carf.org/accreditation/'
+    'https://www.carf.org/accreditation/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1605,
@@ -837,7 +1197,11 @@ INSERT INTO org_credential (
     'https://www.carf.org',
     'carf_cardiac_rehabilitation_accreditation',
     'CARF Cardiac Rehabilitation Program Accreditation',
-    'https://www.carf.org/accreditation/'
+    'https://www.carf.org/accreditation/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1606,
@@ -846,7 +1210,11 @@ INSERT INTO org_credential (
     'https://www.carf.org',
     'carf_pulmonary_rehabilitation_accreditation',
     'CARF Pulmonary Rehabilitation Program Accreditation',
-    'https://www.carf.org/accreditation/'
+    'https://www.carf.org/accreditation/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 );
 
 
@@ -858,7 +1226,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
 (
     1700,
@@ -867,7 +1239,11 @@ INSERT INTO org_credential (
     'https://ameriburn.org',
     'aba_adult_burn_center_verification',
     'ABA Verified Adult Burn Center',
-    'https://ameriburn.org/quality-care/burn-center-verification/'
+    'https://ameriburn.org/quality-care/burn-center-verification/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1701,
@@ -876,7 +1252,11 @@ INSERT INTO org_credential (
     'https://ameriburn.org',
     'aba_pediatric_burn_center_verification',
     'ABA Verified Pediatric Burn Center',
-    'https://ameriburn.org/quality-care/burn-center-verification/'
+    'https://ameriburn.org/quality-care/burn-center-verification/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1702,
@@ -885,7 +1265,11 @@ INSERT INTO org_credential (
     'https://ameriburn.org',
     'aba_combined_burn_center_verification',
     'ABA Verified Adult and Pediatric Burn Center',
-    'https://ameriburn.org/quality-care/burn-center-verification/'
+    'https://ameriburn.org/quality-care/burn-center-verification/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 );
 
 
@@ -897,7 +1281,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
 (
     1800,
@@ -906,7 +1294,11 @@ INSERT INTO org_credential (
     'https://www.uhms.org',
     'uhms_hyperbaric_facility_accreditation',
     'UHMS Hyperbaric Facility Accreditation',
-    'https://www.uhms.org/accreditation.html'
+    'https://www.uhms.org/accreditation.html',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 );
 
 
@@ -918,7 +1310,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
 (
     1900,
@@ -927,7 +1323,11 @@ INSERT INTO org_credential (
     'https://aasm.org',
     'aasm_sleep_center_accreditation',
     'AASM Sleep Center Accreditation',
-    'https://aasm.org/accreditation/'
+    'https://aasm.org/accreditation/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1901,
@@ -936,7 +1336,11 @@ INSERT INTO org_credential (
     'https://www.aabb.org',
     'aabb_blood_bank_transfusion_service_accreditation',
     'AABB Blood Bank / Transfusion Service Accreditation',
-    'https://www.aabb.org/standards-accreditation/accreditation'
+    'https://www.aabb.org/standards-accreditation/accreditation',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1902,
@@ -945,7 +1349,11 @@ INSERT INTO org_credential (
     'https://www.factglobal.org',
     'fact_cellular_therapy_accreditation',
     'FACT Cellular Therapy Accreditation',
-    'https://www.factglobal.org/accreditation/'
+    'https://www.factglobal.org/accreditation/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1903,
@@ -954,7 +1362,11 @@ INSERT INTO org_credential (
     'https://www.intersocietal.org',
     'iac_echocardiography_accreditation',
     'IAC Echocardiography Accreditation',
-    'https://www.intersocietal.org/echo/'
+    'https://www.intersocietal.org/echo/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1904,
@@ -963,7 +1375,11 @@ INSERT INTO org_credential (
     'https://www.intersocietal.org',
     'iac_nuclear_pet_accreditation',
     'IAC Nuclear/PET Accreditation',
-    'https://www.intersocietal.org/nuclear/'
+    'https://www.intersocietal.org/nuclear/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1905,
@@ -972,7 +1388,11 @@ INSERT INTO org_credential (
     'https://www.intersocietal.org',
     'iac_vascular_testing_accreditation',
     'IAC Vascular Testing Accreditation',
-    'https://www.intersocietal.org/vascular/'
+    'https://www.intersocietal.org/vascular/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1906,
@@ -981,7 +1401,11 @@ INSERT INTO org_credential (
     'https://www.intersocietal.org',
     'iac_cardiac_ct_accreditation',
     'IAC Cardiac CT Accreditation',
-    'https://www.intersocietal.org/ct/'
+    'https://www.intersocietal.org/ct/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 );
 
 
@@ -993,7 +1417,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
 (
     1950,
@@ -1002,7 +1430,11 @@ INSERT INTO org_credential (
     'https://cvquality.acc.org',
     'acc_chest_pain_center_accreditation',
     'ACC Chest Pain Center Accreditation',
-    'https://cvquality.acc.org/accreditation'
+    'https://cvquality.acc.org/accreditation',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1951,
@@ -1011,7 +1443,11 @@ INSERT INTO org_credential (
     'https://cvquality.acc.org',
     'acc_heart_failure_accreditation',
     'ACC Heart Failure Accreditation',
-    'https://cvquality.acc.org/accreditation'
+    'https://cvquality.acc.org/accreditation',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1952,
@@ -1020,7 +1456,11 @@ INSERT INTO org_credential (
     'https://cvquality.acc.org',
     'acc_cardiac_cath_lab_accreditation',
     'ACC Cardiac Catheterization Lab Accreditation',
-    'https://cvquality.acc.org/accreditation'
+    'https://cvquality.acc.org/accreditation',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1953,
@@ -1029,7 +1469,11 @@ INSERT INTO org_credential (
     'https://cvquality.acc.org',
     'acc_electrophysiology_lab_accreditation',
     'ACC Electrophysiology Lab Accreditation',
-    'https://cvquality.acc.org/accreditation'
+    'https://cvquality.acc.org/accreditation',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1954,
@@ -1038,7 +1482,11 @@ INSERT INTO org_credential (
     'https://cvquality.acc.org',
     'acc_transcatheter_valve_certification',
     'ACC Transcatheter Valve Certification',
-    'https://cvquality.acc.org/accreditation'
+    'https://cvquality.acc.org/accreditation',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1955,
@@ -1047,7 +1495,11 @@ INSERT INTO org_credential (
     'https://cvquality.acc.org',
     'acc_cardiovascular_imaging_accreditation',
     'ACC Cardiovascular Imaging Accreditation',
-    'https://cvquality.acc.org/accreditation'
+    'https://cvquality.acc.org/accreditation',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 );
 
 
@@ -1058,7 +1510,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
 (
     1990,
@@ -1067,7 +1523,11 @@ INSERT INTO org_credential (
     'https://planetree.org',
     'planetree_person_centered_care_certification',
     'Planetree Person-Centered Care Certification',
-    'https://planetree.org/person-centered-care-certification/'
+    'https://planetree.org/person-centered-care-certification/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 );
 
 
@@ -1079,7 +1539,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
 (
     1960,
@@ -1088,7 +1552,11 @@ INSERT INTO org_credential (
     'https://www.acep.org',
     'acep_geriatric_emergency_department_level_1_accreditation',
     'ACEP Level 1 Geriatric Emergency Department Accreditation',
-    'https://www.acep.org/geda/'
+    'https://www.acep.org/geda/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1961,
@@ -1097,7 +1565,11 @@ INSERT INTO org_credential (
     'https://www.acep.org',
     'acep_geriatric_emergency_department_level_2_accreditation',
     'ACEP Level 2 Geriatric Emergency Department Accreditation',
-    'https://www.acep.org/geda/'
+    'https://www.acep.org/geda/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1962,
@@ -1106,7 +1578,11 @@ INSERT INTO org_credential (
     'https://www.acep.org',
     'acep_geriatric_emergency_department_level_3_accreditation',
     'ACEP Level 3 Geriatric Emergency Department Accreditation',
-    'https://www.acep.org/geda/'
+    'https://www.acep.org/geda/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 );
 
 
@@ -1118,7 +1594,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
 (
     1965,
@@ -1127,7 +1607,11 @@ INSERT INTO org_credential (
     'https://scpc.org',
     'scpc_chest_pain_center_accreditation',
     'SCPC Chest Pain Center Accreditation',
-    'https://scpc.org/accreditation/'
+    'https://scpc.org/accreditation/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 );
 
 
@@ -1138,7 +1622,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
 (
     1970,
@@ -1147,7 +1635,11 @@ INSERT INTO org_credential (
     'https://www.dnv.com',
     'dnv_primary_stroke_center_certification',
     'DNV Primary Stroke Center Certification',
-    'https://www.dnv.com/assurance/healthcare/'
+    'https://www.dnv.com/assurance/healthcare/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1971,
@@ -1156,7 +1648,11 @@ INSERT INTO org_credential (
     'https://www.dnv.com',
     'dnv_comprehensive_stroke_center_certification',
     'DNV Comprehensive Stroke Center Certification',
-    'https://www.dnv.com/assurance/healthcare/'
+    'https://www.dnv.com/assurance/healthcare/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1972,
@@ -1165,7 +1661,11 @@ INSERT INTO org_credential (
     'https://www.dnv.com',
     'dnv_thrombectomy_capable_stroke_center_certification',
     'DNV Thrombectomy-Capable Stroke Center Certification',
-    'https://www.dnv.com/assurance/healthcare/'
+    'https://www.dnv.com/assurance/healthcare/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1973,
@@ -1174,7 +1674,11 @@ INSERT INTO org_credential (
     'https://www.dnv.com',
     'dnv_acute_stroke_ready_hospital_certification',
     'DNV Acute Stroke Ready Hospital Certification',
-    'https://www.dnv.com/assurance/healthcare/'
+    'https://www.dnv.com/assurance/healthcare/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1974,
@@ -1183,7 +1687,11 @@ INSERT INTO org_credential (
     'https://www.dnv.com',
     'dnv_orthopedic_center_of_excellence',
     'DNV Orthopedic Center of Excellence Certification',
-    'https://www.dnv.com/assurance/healthcare/'
+    'https://www.dnv.com/assurance/healthcare/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1975,
@@ -1192,7 +1700,11 @@ INSERT INTO org_credential (
     'https://www.dnv.com',
     'dnv_spine_surgery_center_of_excellence',
     'DNV Spine Surgery Center of Excellence Certification',
-    'https://www.dnv.com/assurance/healthcare/'
+    'https://www.dnv.com/assurance/healthcare/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     1976,
@@ -1201,5 +1713,9 @@ INSERT INTO org_credential (
     'https://www.dnv.com',
     'dnv_hip_knee_replacement_center_of_excellence',
     'DNV Hip and Knee Replacement Center of Excellence Certification',
-    'https://www.dnv.com/assurance/healthcare/'
+    'https://www.dnv.com/assurance/healthcare/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 );

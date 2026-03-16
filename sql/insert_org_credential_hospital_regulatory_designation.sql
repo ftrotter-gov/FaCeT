@@ -9,7 +9,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
 (
     4000,
@@ -18,7 +22,11 @@ INSERT INTO org_credential (
     'https://www.cms.gov',
     'critical_access_hospital',
     'Critical Access Hospital (CAH)',
-    'https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals'
+    'https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     4001,
@@ -27,7 +35,11 @@ INSERT INTO org_credential (
     'https://www.cms.gov',
     'sole_community_hospital',
     'Sole Community Hospital (SCH)',
-    'https://www.cms.gov/medicare/medicare-provider-enrollment-and-certifications/medicare-provider-id-reassignment/sole-community-hospital'
+    'https://www.cms.gov/medicare/medicare-provider-enrollment-and-certifications/medicare-provider-id-reassignment/sole-community-hospital',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     4002,
@@ -36,7 +48,11 @@ INSERT INTO org_credential (
     'https://www.cms.gov',
     'pps_exempt_cancer_hospital',
     'PPS-Exempt Cancer Hospital (Prospective Payment System-Exempt Cancer Hospital)',
-    'https://www.cms.gov/medicare/quality-initiatives-patient-assessment-instruments/pps-exempt-cancer-hospital-quality-reporting-pchqr-program'
+    'https://www.cms.gov/medicare/quality-initiatives-patient-assessment-instruments/pps-exempt-cancer-hospital-quality-reporting-pchqr-program',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     4003,
@@ -45,7 +61,11 @@ INSERT INTO org_credential (
     'https://www.cms.gov',
     'disproportionate_share_hospital',
     'Disproportionate Share Hospital (DSH) Status',
-    'https://www.cms.gov/medicare/medicare-fee-for-service-payment/hospital-inpatient/acute-inpatientpps'
+    'https://www.cms.gov/medicare/medicare-fee-for-service-payment/hospital-inpatient/acute-inpatientpps',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     4004,
@@ -54,7 +74,11 @@ INSERT INTO org_credential (
     'https://www.cms.gov',
     'rural_referral_center',
     'Rural Referral Center (RRC)',
-    'https://www.cms.gov/medicare/medicare-fee-for-service-payment/hospital-inpatient/acute-inpatientpps'
+    'https://www.cms.gov/medicare/medicare-fee-for-service-payment/hospital-inpatient/acute-inpatientpps',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     4005,
@@ -63,7 +87,11 @@ INSERT INTO org_credential (
     'https://www.cms.gov',
     'medicare_dependent_hospital',
     'Medicare-Dependent Hospital (MDH)',
-    'https://www.cms.gov/medicare/medicare-fee-for-service-payment/hospital-inpatient/acute-inpatientpps'
+    'https://www.cms.gov/medicare/medicare-fee-for-service-payment/hospital-inpatient/acute-inpatientpps',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     4006,
@@ -72,7 +100,11 @@ INSERT INTO org_credential (
     'https://www.cms.gov',
     'essential_access_community_hospital',
     'Essential Access Community Hospital (EACH)',
-    'https://www.cms.gov/medicare/medicare-fee-for-service-payment/hospital-inpatient/acute-inpatientpps'
+    'https://www.cms.gov/medicare/medicare-fee-for-service-payment/hospital-inpatient/acute-inpatientpps',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     4007,
@@ -81,7 +113,11 @@ INSERT INTO org_credential (
     'https://www.hrsa.gov',
     '340b_covered_entity',
     '340B Covered Entity',
-    'https://www.hrsa.gov/opa/index.html'
+    'https://www.hrsa.gov/opa/index.html',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     4008,
@@ -90,7 +126,11 @@ INSERT INTO org_credential (
     'https://www.cms.gov',
     'childrens_hospital_designation',
     'Children''s Hospital (Medicare classification / regulatory recognition)',
-    'https://www.cms.gov/medicare/quality-initiatives-patient-assessment-instruments/hospitalqualityinits'
+    'https://www.cms.gov/medicare/quality-initiatives-patient-assessment-instruments/hospitalqualityinits',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     4009,
@@ -99,5 +139,9 @@ INSERT INTO org_credential (
     'https://www.cms.gov',
     'physician_owned_hospital_restriction',
     'Physician-Owned Hospital (Medicare Participation Restricted Under Stark Law)',
-    'https://www.cms.gov/Medicare/Fraud-and-Abuse/PhysicianSelfReferral/Physician_Owned_Hospitals'
+    'https://www.cms.gov/Medicare/Fraud-and-Abuse/PhysicianSelfReferral/Physician_Owned_Hospitals',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 );

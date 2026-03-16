@@ -9,7 +9,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
 (
     2000,
@@ -18,7 +22,11 @@ INSERT INTO org_credential (
     'https://www.cancer.gov',
     'nci_cancer_center_designation',
     'NCI Designated Cancer Center',
-    'https://www.cancer.gov/research/infrastructure/cancer-centers'
+    'https://www.cancer.gov/research/infrastructure/cancer-centers',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     2001,
@@ -27,7 +35,11 @@ INSERT INTO org_credential (
     'https://www.cancer.gov',
     'nci_comprehensive_cancer_center_designation',
     'NCI Designated Comprehensive Cancer Center',
-    'https://www.cancer.gov/research/infrastructure/cancer-centers'
+    'https://www.cancer.gov/research/infrastructure/cancer-centers',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     2002,
@@ -36,7 +48,11 @@ INSERT INTO org_credential (
     'https://www.cancer.gov',
     'nci_basic_laboratory_cancer_center_designation',
     'NCI Designated Basic Laboratory Cancer Center',
-    'https://www.cancer.gov/research/infrastructure/cancer-centers'
+    'https://www.cancer.gov/research/infrastructure/cancer-centers',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 );
 
 
@@ -48,7 +64,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
 (
     3000,
@@ -57,7 +77,11 @@ INSERT INTO org_credential (
     'https://www.facs.org',
     'trauma_center_level_1',
     'Level I Trauma Center',
-    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/'
+    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     3001,
@@ -66,7 +90,11 @@ INSERT INTO org_credential (
     'https://www.facs.org',
     'trauma_center_level_2',
     'Level II Trauma Center',
-    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/'
+    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     3002,
@@ -75,7 +103,11 @@ INSERT INTO org_credential (
     'https://www.facs.org',
     'trauma_center_level_3',
     'Level III Trauma Center',
-    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/'
+    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     3003,
@@ -84,7 +116,11 @@ INSERT INTO org_credential (
     'https://www.facs.org',
     'trauma_center_level_4',
     'Level IV Trauma Center',
-    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/'
+    'https://www.facs.org/quality-programs/trauma/verification-review-and-consultation-program/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 );
 
 
@@ -95,7 +131,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
 (
     3005,
@@ -104,7 +144,11 @@ INSERT INTO org_credential (
     'https://www.aamc.org',
     'academic_medical_center',
     'Academic Medical Center',
-    'https://www.aamc.org/what-we-do/mission-areas/academic-medicine'
+    'https://www.aamc.org/what-we-do/mission-areas/academic-medicine',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 );
 
 
@@ -115,7 +159,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
 (
     3006,
@@ -124,7 +172,11 @@ INSERT INTO org_credential (
     'https://www.cms.gov',
     'teaching_hospital',
     'Teaching Hospital',
-    'https://www.cms.gov/medicare/payment/prospective-payment-systems/acute-inpatient-pps/indirect-medical-education-ime'
+    'https://www.cms.gov/medicare/payment/prospective-payment-systems/acute-inpatient-pps/indirect-medical-education-ime',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     3007,
@@ -133,7 +185,11 @@ INSERT INTO org_credential (
     'https://www.cms.gov',
     'major_teaching_hospital',
     'Major Teaching Hospital',
-    'https://www.cms.gov/medicare/payment/prospective-payment-systems/acute-inpatient-pps/indirect-medical-education-ime'
+    'https://www.cms.gov/medicare/payment/prospective-payment-systems/acute-inpatient-pps/indirect-medical-education-ime',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 );
 
 
@@ -145,7 +201,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
 (
     3010,
@@ -154,7 +214,11 @@ INSERT INTO org_credential (
     'https://ameriburn.org',
     'burn_center_adult',
     'Adult Burn Center',
-    'https://ameriburn.org/quality-care/burn-center-verification/'
+    'https://ameriburn.org/quality-care/burn-center-verification/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     3011,
@@ -163,7 +227,11 @@ INSERT INTO org_credential (
     'https://ameriburn.org',
     'burn_center_pediatric',
     'Pediatric Burn Center',
-    'https://ameriburn.org/quality-care/burn-center-verification/'
+    'https://ameriburn.org/quality-care/burn-center-verification/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 ),
 (
     3012,
@@ -172,5 +240,9 @@ INSERT INTO org_credential (
     'https://ameriburn.org',
     'burn_center_adult_pediatric',
     'Adult and Pediatric Burn Center',
-    'https://ameriburn.org/quality-care/burn-center-verification/'
+    'https://ameriburn.org/quality-care/burn-center-verification/',
+    FALSE,
+    FALSE,
+    NULL,
+    NULL
 );

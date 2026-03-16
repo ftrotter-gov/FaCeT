@@ -9,7 +9,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
     (
         1,
@@ -18,7 +22,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_hospital_accreditation',
         'Joint Commission Hospital Accreditation',
-        'https://www.jointcommission.org/accreditation-and-certification/health-care-settings/hospital/'
+        'https://www.jointcommission.org/accreditation-and-certification/health-care-settings/hospital/',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         2,
@@ -27,7 +35,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_critical_access_hospital_accreditation',
         'Joint Commission Critical Access Hospital Accreditation',
-        'https://www.jointcommission.org/accreditation-and-certification/health-care-settings/critical-access-hospital/'
+        'https://www.jointcommission.org/accreditation-and-certification/health-care-settings/critical-access-hospital/',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         3,
@@ -36,7 +48,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_ambulatory_health_care_accreditation',
         'Joint Commission Ambulatory Health Care Accreditation',
-        'https://www.jointcommission.org/accreditation-and-certification/health-care-settings/ambulatory-health-care/'
+        'https://www.jointcommission.org/accreditation-and-certification/health-care-settings/ambulatory-health-care/',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         4,
@@ -45,7 +61,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_behavioral_health_accreditation',
         'Joint Commission Behavioral Health Care and Human Services Accreditation',
-        'https://www.jointcommission.org/accreditation-and-certification/health-care-settings/behavioral-health-care-and-human-services/'
+        'https://www.jointcommission.org/accreditation-and-certification/health-care-settings/behavioral-health-care-and-human-services/',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         5,
@@ -54,7 +74,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_home_care_accreditation',
         'Joint Commission Home Care Accreditation',
-        'https://www.jointcommission.org/accreditation-and-certification/health-care-settings/home-care/'
+        'https://www.jointcommission.org/accreditation-and-certification/health-care-settings/home-care/',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         6,
@@ -63,7 +87,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_laboratory_accreditation',
         'Joint Commission Laboratory Accreditation',
-        'https://www.jointcommission.org/accreditation-and-certification/health-care-settings/laboratory/'
+        'https://www.jointcommission.org/accreditation-and-certification/health-care-settings/laboratory/',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         7,
@@ -72,7 +100,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_nursing_care_center_accreditation',
         'Joint Commission Nursing Care Center Accreditation',
-        'https://www.jointcommission.org/accreditation-and-certification/health-care-settings/nursing-care-center/'
+        'https://www.jointcommission.org/accreditation-and-certification/health-care-settings/nursing-care-center/',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         8,
@@ -81,7 +113,11 @@ INSERT INTO org_credential (
         'https://www.jointcommission.org',
         'jc_office_based_surgery_accreditation',
         'Joint Commission Office-Based Surgery Accreditation',
-        'https://www.jointcommission.org/accreditation-and-certification/health-care-settings/office-based-surgery/'
+        'https://www.jointcommission.org/accreditation-and-certification/health-care-settings/office-based-surgery/',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     );
 
 
@@ -93,7 +129,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
     (
         9,
@@ -102,7 +142,11 @@ INSERT INTO org_credential (
         'https://www.dnv.us',
         'dnv_niaho_hospital_accreditation',
         'DNV NIAHO Hospital Accreditation (Acute Care)',
-        'https://www.dnv.us/services/niaho-accreditation-for-hospitals2/'
+        'https://www.dnv.us/services/niaho-accreditation-for-hospitals2/',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         10,
@@ -111,7 +155,11 @@ INSERT INTO org_credential (
         'https://www.dnv.us',
         'dnv_niaho_critical_access_hospital_accreditation',
         'DNV NIAHO Critical Access Hospital Accreditation',
-        'https://www.dnv.com/services/niaho-accreditation-for-critical-access-hospitals/'
+        'https://www.dnv.com/services/niaho-accreditation-for-critical-access-hospitals/',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         11,
@@ -120,7 +168,11 @@ INSERT INTO org_credential (
         'https://www.dnv.us',
         'dnv_niaho_psychiatric_hospital_accreditation',
         'DNV NIAHO Psychiatric Hospital Accreditation',
-        'https://www.dnv.us/life-sciences/healthcare/ac/'
+        'https://www.dnv.us/life-sciences/healthcare/ac/',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     );
 
 
@@ -132,7 +184,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
     (
         12,
@@ -141,7 +197,11 @@ INSERT INTO org_credential (
         'https://www.achc.org',
         'achc_acute_care_hospital_accreditation',
         'ACHC Acute Care Hospital Accreditation',
-        'https://www.achc.org/acute-care-hospitals/'
+        'https://www.achc.org/acute-care-hospitals/',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     ),
     (
         13,
@@ -150,7 +210,11 @@ INSERT INTO org_credential (
         'https://www.achc.org',
         'achc_critical_access_hospital_accreditation',
         'ACHC Critical Access Hospital Accreditation',
-        'https://www.achc.org/acute-care-hospitals/'
+        'https://www.achc.org/acute-care-hospitals/',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     );
 
 
@@ -162,7 +226,11 @@ INSERT INTO org_credential (
     issuer_url,
     credential_type,
     display,
-    credential_url
+    credential_url,
+    is_credential_retired,
+    is_cms_deeming_credential,
+    created_at,
+    updated_at
 ) VALUES
     (
         14,
@@ -171,5 +239,9 @@ INSERT INTO org_credential (
         'https://cihq.org',
         'cihq_hospital_accreditation',
         'CIHQ Hospital Accreditation',
-        'https://cihq.org/accreditation-programs/hospitals/'
+        'https://cihq.org/accreditation-programs/hospitals/',
+        FALSE,
+        FALSE,
+        NULL,
+        NULL
     );

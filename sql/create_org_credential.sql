@@ -6,7 +6,11 @@ CREATE TABLE org_credential (
     issuer_url TEXT,
     credential_type TEXT NOT NULL UNIQUE,
     display TEXT NOT NULL,
-    credential_url TEXT
+    credential_url TEXT,
+    is_credential_retired BOOLEAN NOT NULL DEFAULT FALSE,
+    is_cms_deeming_credential BOOLEAN NOT NULL DEFAULT FALSE,
+    created_at TIMESTAMPTZ,
+    updated_at TIMESTAMPTZ
 );
 
 CREATE INDEX org_credential_category_idx ON org_credential(category);
