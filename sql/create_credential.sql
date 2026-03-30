@@ -20,6 +20,7 @@
 CREATE TABLE IF NOT EXISTS dctnry.clinical_credential (
   id                          INT PRIMARY KEY,
   credential_abbr             TEXT        NOT NULL,  -- e.g., MD, DO, PhD
+  unique_credential_abbr      TEXT        NOT NULL,  -- unique version with _1, _2 suffixes for duplicates
   credential_name             TEXT        NOT NULL,  -- e.g., Medical Doctor
   credentialing_organization_name VARCHAR(255),
   credentialing_organization_url  TEXT,
