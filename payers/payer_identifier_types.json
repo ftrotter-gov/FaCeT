@@ -1,21 +1,3 @@
-We need to have a Value Set which lists the payer acryonm, description, url and NDH system uri. 
-
-Then we need to have those available as identifier systems when we model out Organizations that are payers in the NDH. 
-
-Would be great if we could have this process make the identifier variations less complex overall, or do something else more elegant. 
-
-Here are the payer ID systems that I am aware of: 
-
-
-
-
-
-
-
-Here it is as cleaned up JSON
-
-
-
 {
   "payer_identifier_systems": [
     {
