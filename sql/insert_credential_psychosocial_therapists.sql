@@ -128,3 +128,13 @@ VALUES
 
 -- Additional FDA List Mental Health Credentials
   (60095, 'MFCC', 'MFCC', 'Marriage, Family and Child Counselor', NULL, NULL, 'Licensed counselor specializing in marriage, family, and child therapy', TRUE, TRUE, FALSE, FALSE, FALSE, 0, NULL, NULL); -- 60095
+
+-- ABA / Autism Credentials (QABA and BACB)
+INSERT INTO dctnry.clinical_credential
+  (id, credential_abbr, unique_credential_abbr, credential_name, credentialing_organization_name,
+   credentialing_organization_url, credential_description, is_multisource, is_clinical,
+   is_board_certification, is_credential_retired, is_fhir_credential, duplicate_abbreviation_code, created_at, updated_at)
+VALUES
+  (60096, 'ABAT', 'ABAT', 'Applied Behavior Analysis Technician', 'Qualified Applied Behavior Analysis Credentialing Board', 'https://qababoard.com/', 'Entry-level ABA professional who delivers direct one-on-one behavioral therapy to individuals with autism spectrum disorder or other developmental disabilities, implementing treatment plans designed by a supervisor. Works under ongoing supervision from a QASP-S or QBA. Does not design treatment plans or set clinical goals.', FALSE, TRUE, FALSE, FALSE, FALSE, 0, NULL, NULL), -- 60096
+  (60097, 'QASP-S', 'QASP-S', 'Qualified Autism Services Practitioner-Supervisor', 'Qualified Applied Behavior Analysis Credentialing Board', 'https://qababoard.com/qasp-s-scope/', 'Bachelor-level ABA practitioner who supervises behavior technicians and ABATs, trains direct-care staff, monitors treatment progress, reviews behavioral data, and assists with implementation of treatment plans under the oversight of a master-level clinician such as a QBA. Occupies the middle tier in QABA''s three-tier clinical model.', FALSE, TRUE, FALSE, FALSE, FALSE, 0, NULL, NULL), -- 60097
+  (60098, 'QBA', 'QBA', 'Qualified Behavior Analyst', 'Qualified Applied Behavior Analysis Credentialing Board', 'https://qababoard.com/pages/qualified-behavior-analyst-credential/', 'Master''s- or doctoral-level behavior analyst who independently designs individualized ABA treatment plans, conducts behavioral assessments, analyzes data, and supervises QASP-S and ABAT professionals. QABA''s highest-level credential for independent clinical oversight of ABA programs.', FALSE, TRUE, TRUE, FALSE, FALSE, 0, NULL, NULL); -- 60098

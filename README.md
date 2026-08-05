@@ -27,6 +27,58 @@ FACET is a taxonomy of clinical credentials derived from the real-world [NPPES d
 * Look in [csv/](./csv) for the CSV version of FACET and the map from raw strings
 * Please look in [sql/](./sql) for the PostGreSQL codesets. 
 
+## Data Dictionary
+
+FACET uses two separate tables: one for **individual-level credentials** (held by clinicians) and one for **organizational-level credentials** (held by healthcare facilities and organizations).
+
+---
+
+### `dctnry.clinical_credential` — Individual-Level Credentials
+
+These are credentials held by individual clinicians — degrees, licenses, board certifications, fellowships, and other personal professional qualifications.
+
+| Column | Type | Description |
+|---|---|---|
+| `id` | INT | Manually assigned primary key. IDs are intentionally spaced to leave room within groupings by credential category (e.g., physicians are 1–1000, nurses are 1001–10000). Do not change. |
+| `credential_abbr` | TEXT | The credential abbreviation as it appears in the wild (e.g., `MD`, `RN`, `DO`). May not be unique across all rows — some abbreviations refer to more than one credential. |
+| `unique_credential_abbr` | TEXT | A guaranteed-unique version of `credential_abbr`. For duplicate abbreviations, a numeric suffix is appended (e.g., `AP_1`, `AP_2`, `RN-BC_1`, `RN-BC_2`). Intended for use as a stable machine-readable code or key. |
+| `credential_name` | TEXT | Full spelled-out name of the credential (e.g., `Medical Doctor`, `Registered Nurse`). |
+| `credentialing_organization_name` | VARCHAR(255) | The single organization that issues this credential, when applicable. NULL for multi-source credentials such as medical degrees that are granted by many different schools. |
+| `credentialing_organization_url` | TEXT | Best URL for the credentialing organization or its specific credential/program page. May be just the organization homepage when a direct credential URL is not available. |
+| `credential_description` | TEXT | Natural language description of the credential, its requirements, and its clinical purpose. |
+| `is_multisource` | BOOLEAN | `TRUE` if many different organizations can issue this credential (e.g., `MD` and `RN` are granted by many schools). `FALSE` for single-source credentials such as board certifications issued by a single body. |
+| `is_clinical` | BOOLEAN | `TRUE` if the credential is inherently related to clinical practice. Non-clinical credentials (e.g., CPA, CEO) are `FALSE`. Veterinarian credentials are also treated as `FALSE` for the purposes of this database. |
+| `is_board_certification` | BOOLEAN | `TRUE` if this credential represents a board certification — a voluntary, post-graduate credential demonstrating specialized expertise. |
+| `is_credential_retired` | BOOLEAN | `TRUE` if the credentialing organization has stopped issuing this credential to new holders, but existing holders may continue to use it. |
+| `is_fhir_credential` | BOOLEAN | `TRUE` if this credential appears in the FHIR v2-0360 codeset (`IndividualSpecialtyAndDegreeLicenseCertificateVS` from the [HL7 NDH Implementation Guide](https://build.fhir.org/ig/HL7/fhir-us-ndh/ValueSet-IndividualSpecialtyAndDegreeLicenseCertificateVS.html)). This column will be deprecated if and when FACET itself becomes an official FHIR codeset. |
+| `duplicate_abbreviation_code` | INT | `0` = this abbreviation is not shared with any other credential. `1` = this abbreviation is shared with at least one other credential, and this row is the "winning" (most common) meaning used in auto-mapping. `2` or higher = this abbreviation is shared, and this row is a less common meaning that will not be used in auto-mapping. |
+| `created_at` | TIMESTAMPTZ | Timestamp set automatically by the database on record creation. Always `NULL` in insert statements. |
+| `updated_at` | TIMESTAMPTZ | Timestamp set automatically by the database on record update. Always `NULL` in insert statements. |
+
+---
+
+### `dctnry.org_credential` — Organizational-Level Credentials
+
+These are credentials held by healthcare organizations and facilities — accreditations, certifications, designations, and regulatory designations issued by bodies such as The Joint Commission, DNV Healthcare, and CMS-approved deeming authorities.
+
+A **CMS deeming credential** (`is_cms_deeming_credential = TRUE`) means that the issuing organization has been authorized by CMS to determine whether a healthcare provider meets Medicare Conditions of Participation (CoPs). When a provider holds such an accreditation, CMS "deems" them to be in compliance without conducting its own survey.
+
+| Column | Type | Description |
+|---|---|---|
+| `id` | BIGINT | Primary key. |
+| `category` | TEXT | The broad category of the organizational credential. Common values include `accreditation`, `certification`, `designation`, and `regulatory_designation`. |
+| `issuer` | TEXT | The name of the organization that issues this credential (e.g., `The Joint Commission`, `DNV Healthcare`, `ACHC`). |
+| `issuer_url` | TEXT | The homepage URL of the issuing organization. |
+| `credential_type` | TEXT | A unique, machine-readable slug/code for this specific credential (e.g., `jc_hospital_accreditation`, `dnv_niaho_hospital_accreditation`). Must be globally UNIQUE across all rows in the table. |
+| `display` | TEXT | Human-readable display name for this credential (e.g., `Joint Commission Hospital Accreditation`). Suitable for use in user interfaces. |
+| `credential_url` | TEXT | URL pointing to the specific credential or accreditation program page at the issuing organization's website. |
+| `is_credential_retired` | BOOLEAN | `TRUE` if this credential is no longer being issued or recognized by the issuing organization. |
+| `is_cms_deeming_credential` | BOOLEAN | `TRUE` if CMS recognizes this accreditation as meeting Medicare Conditions of Participation, making the issuing body a CMS-approved "deeming authority." See [CMS deeming authority documentation](https://www.cms.gov/medicare/provider-enrollment-and-certification/surveycertificationgeninfo/deeming-authority) for more detail. |
+| `created_at` | TIMESTAMPTZ | Timestamp set automatically by the database on record creation. Always `NULL` in insert statements. |
+| `updated_at` | TIMESTAMPTZ | Timestamp set automatically by the database on record update. Always `NULL` in insert statements. |
+
+---
+
 ## Duplicate Credentials
 
 To see duplicate credentials in the data use the SQL: 
