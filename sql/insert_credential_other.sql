@@ -95,6 +95,7 @@ VALUES
 -- Additional Pharmacy Credentials
   (50046, 'BCPS', 'BCPS', 'Board Certified Pharmacotherapy Specialist', 'Board of Pharmaceutical Specialties', 'https://www.bpsweb.org', 'Board certified pharmacist specializing in pharmacotherapy', FALSE, TRUE, TRUE, FALSE, FALSE, 0, NULL, NULL), -- 50046
   (50047, 'BCPP', 'BCPP', 'Board Certified Psychiatric Pharmacist', 'Board of Pharmaceutical Specialties', 'https://www.bpsweb.org', 'Board certified pharmacist specializing in psychiatric medications', FALSE, TRUE, TRUE, FALSE, FALSE, 0, NULL, NULL), -- 50047
+  (50092, 'PhC', 'PhC', 'Pharmacist Clinician', 'New Mexico Board of Pharmacy', 'https://www.nmmb.state.nm.us/health-resource/nm-board-of-pharmacy/', 'Advanced practice pharmacist specific to New Mexico who undergoes additional training (60 CE hour physical assessment course, 150 clinically supervised patient contact hours, and 300 clinically supervised patient contacts) to bridge gaps in access to care; has independent prescriptive authority under a collaborative practice protocol with a supervising physician', TRUE, TRUE, FALSE, FALSE, FALSE, 0, NULL, NULL), -- 50092
 
 -- Additional Diagnostic Imaging Credentials
   (50048, 'RDMS', 'RDMS', 'Registered Diagnostic Medical Sonographer', 'American Registry for Diagnostic Medical Sonography', 'https://www.ardms.org', 'Registered sonographer performing diagnostic ultrasound examinations', FALSE, TRUE, TRUE, FALSE, FALSE, 0, NULL, NULL), -- 50048
