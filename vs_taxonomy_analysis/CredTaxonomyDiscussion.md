@@ -83,3 +83,97 @@ Largest NP ETL targets by provider count:
 **Key insight:** The 84% blank rate reflects a fundamental structural mismatch: the NUCC masters taxonomy covers only seven behavioral/rehabilitation professions and was not designed to cover the full scope of clinical practice that masters-prepared professionals now occupy. Credentials like MPT, MSPT, MS, MA, MPH, MED, MOT are generic academic degrees pointed at clinical roles with no masters-level non-physician NUCC home. Physical Therapists and Occupational Therapists do have NUCC codes — but under a separate grouping, not in this masters file.
 
 Clean matches that do exist: `MCD` → Audiologist (strength 3); `MSW`/`MSSW` → Counselor (strength 2 for mental/behavioral health context, strength 1 otherwise); any credential + genetics specialty → Genetic Counselor M.S. (strength 2); any credential + core psychiatry → Counselor (strength 2).
+
+---
+
+## Three Buckets for Remediation
+
+### Bucket 1: Clear ETL Conversion — Existing NUCC Code, Apply Directly
+
+These are cases where a correct non-physician NUCC taxonomy code already exists and the provider record should simply be remapped. No policy decision is required — this is a data quality fix. The mapping is unambiguous and the target values are already populated in `should_use_tax` and `should_use_tax_description` in each output file.
+
+**Nurse Practitioners:** All rows with `match_strength` of `2` or `3` are ETL candidates — **24,220 provider records** (81.3% of all NP providers in this file) who are currently carrying physician taxonomy codes when a specific NP code is correct and available.
+
+**Physician Assistants:** Rows with `match_strength = 2` represent **14,394 provider records** (82.6%) that can be cleanly converted to either Medical PA (`363AM0700X`) or Surgical PA (`363AS0400X`). Strength-1 rows (2,652 providers) are reasonable conversions as well but warrant human review given specialty ambiguity.
+
+**Masters-Degree:** Only 184 providers (14.4%) have clean ETL targets, reflecting the limited NUCC coverage in this grouping.
+
+| Group | ETL-Ready Providers (strength 2+3) | % of Group |
+|---|---|---|
+| Nurse Practitioners | 23,636 | 79.3% |
+| Physician Assistants | 14,394 | 82.6% |
+| Masters Degree | 184 | 14.4% |
+| **Total** | **38,214** | **80.4%** |
+
+---
+
+### Bucket 2: Cases Warranting a New NUCC Taxonomy Code
+
+These are cases where a real, established clinical specialty exists for a non-physician provider type, providers are clearly practicing in that specialty and attempting to self-identify through taxonomy selection, but **no NUCC code exists** to receive them. These providers are forced into physician codes by the absence of an appropriate alternative.
+
+#### NP Specialties with No Current NUCC Code
+
+The following practice domains have meaningful NP provider populations, established professional credentialing bodies, and specialty-specific NP credentials — but no NUCC taxonomy code. These are the strongest candidates for new code petitions to NUCC:
+
+| Specialty / Clinical Domain | NP Providers Affected | Notable Specialty Credentials |
+|---|---|---|
+| Emergency Medicine NP | 543 | ENP-C |
+| Cardiovascular Disease NP | 374 | — |
+| Dermatology NP | 317 | DCNP |
+| Hematology & Oncology NP | 269 | AOCNP |
+| Neurology NP | 231 | — |
+| Nephrology NP | 186 | — |
+| Pain Medicine NP | 177 | — |
+| Gastroenterology NP | 175 | — |
+| Endocrinology NP | 167 | — |
+| Pulmonary Disease NP | 164 | — |
+| Surgery NP | 157 | — |
+| Urology NP | 156 | — |
+| Orthopaedic Surgery NP | 143 | — |
+| Hospice & Palliative Medicine NP | 235 (combined) | — |
+| Infectious Disease NP | 119 | — |
+| Allergy & Immunology NP | 73 (combined) | — |
+| Rheumatology NP | 56 | — |
+
+The credential specificity is itself an argument: `DCNP`, `AOCNP`, and `ENP-C` are real board certifications issued by credentialing bodies that have already formally recognized these specialties as distinct enough to certify. The fact that the certifying organizations have acted but NUCC has not is a meaningful signal that new codes are overdue.
+
+#### PA Specialties with No Current NUCC Code
+
+The PA taxonomy gap is structural: only three codes exist (generic, medical, surgical). The binary medical/surgical split is insufficient for modern PA practice. PAs practicing in Radiology (230 providers in this file), Anesthesiology (61), and Pathology (27+) have no code at all. Beyond those, the following domains have established PA board certifications but no corresponding NUCC code:
+
+- Emergency Medicine PA
+- Cardiovascular/Cardiothoracic Surgery PA
+- Dermatology PA
+- Orthopaedic Surgery PA
+- Neurosurgery PA
+
+#### Masters-Degree Providers
+
+The masters file points to a gap for professions whose NUCC codes are present elsewhere in the taxonomy but not in the behavioral/rehabilitation masters grouping: Physical Therapists (MPT, MSPT — 168+ providers choosing PM&R physician codes) and Occupational Therapists (MOT, MOTR/L). The remediation here is partly a FaCeT classification fix (routing those credentials to the correct NUCC grouping) rather than a net-new code petition.
+
+True NUCC gaps in the masters space include: **Athletic Trainer (MS/ATC)**, **Health Educator (MPH/CHES)**, and **Clinical Exercise Physiologist (MS)** — clinical roles increasingly integrated into care teams with no non-physician taxonomy home.
+
+---
+
+### Bucket 3: Records That Are Genuinely Ambiguous or Unresolvable
+
+These records remain blank and should be flagged for manual review or held pending broader policy decisions. Neither an ETL fix nor a new NUCC code petition fully resolves them:
+
+- **NP + surgical specialty:** An `NP` or `CRNP` choosing `NEUROLOGICAL SURGERY` or `THORACIC SURGERY` is practicing in a surgical support role. There is no surgical NP taxonomy in NUCC. Whether this warrants a new code or is better captured by documenting the supporting care role is a clinical policy question.
+- **PA + Radiology/Pathology/Anesthesia:** PAs work in these settings but neither Medical PA nor Surgical PA accurately describes them. A more granular PA taxonomy would resolve this, but is a NUCC petition issue.
+- **Masters providers in clinical medicine:** An `MS` choosing `ENDOCRINOLOGY PHYSICIAN` or `CARDIOVASCULAR DISEASE PHYSICIAN` most likely reflects a clinical research coordinator, lab professional, or similar role — not independent masters-level clinical practice. These may represent upstream data entry problems rather than taxonomy gaps.
+- **Generic credentials with no specialty signal:** A small number of rows carry generic credentials paired with administrative or unusual physician codes (`INDEPENDENT MEDICAL EXAMINER`, `LEGAL MEDICINE`, `CLINICAL INFORMATICS`) where neither a taxonomy match nor a new code is appropriate. These are best reviewed individually.
+
+---
+
+## Recommended Next Steps
+
+1. **Immediate ETL conversion** for all `match_strength = 3` and `match_strength = 2` rows across the NP and PA files — approximately **38,000 provider records**. Target values are already populated in `should_use_tax` and `should_use_tax_description`.
+
+2. **Human review of strength-1 rows** (~3,200 providers across NP and PA files) before conversion. These are reasonable but indirect matches where clinical context should confirm the mapping.
+
+3. **Draft NUCC taxonomy petition** for the highest-volume NP specialty gaps: Emergency Medicine NP, Cardiovascular NP, Dermatology NP, Hematology/Oncology NP, and Neurology NP — all have over 200 affected providers in this dataset alone and have established credentialing bodies already issuing specialty certificates.
+
+4. **Reclassify MPT/MSPT/MOT records** away from the masters-degree credential bucket into the correct NUCC Physical Therapist or Occupational Therapist taxonomy groupings, which already have appropriate codes under their own NUCC section.
+
+5. **Flag and audit remaining blank records** for upstream data quality review — many likely represent miscoded entries rather than genuine taxonomy gaps.
