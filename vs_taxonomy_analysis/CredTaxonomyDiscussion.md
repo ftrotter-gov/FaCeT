@@ -88,9 +88,13 @@ Clean matches that do exist: `MCD` → Audiologist (strength 3); `MSW`/`MSSW` �
 
 ## Three Buckets for Remediation
 
-### Bucket 1: Clear ETL Conversion — Existing NUCC Code, Apply Directly
+---
 
-These are cases where a correct non-physician NUCC taxonomy code already exists and the provider record should simply be remapped. No policy decision is required — this is a data quality fix. The mapping is unambiguous and the target values are already populated in `should_use_tax` and `should_use_tax_description` in each output file.
+### 🟢 Bucket 1: SOLVE WITH ETL
+
+> **A correct non-physician NUCC taxonomy code already exists. The provider record should simply be remapped.**
+> No policy decision required — this is a pure data quality fix. The mapping is unambiguous and the
+> target values are already populated in `should_use_tax` and `should_use_tax_description` in each output file.
 
 **Nurse Practitioners:** All rows with `match_strength` of `2` or `3` are ETL candidates — **24,220 provider records** (81.3% of all NP providers in this file) who are currently carrying physician taxonomy codes when a specific NP code is correct and available.
 
@@ -107,9 +111,12 @@ These are cases where a correct non-physician NUCC taxonomy code already exists 
 
 ---
 
-### Bucket 2: Cases Warranting a New NUCC Taxonomy Code
+### 🟡 Bucket 2: CONSIDER PROPOSING A NEW NUCC CODE
 
-These are cases where a real, established clinical specialty exists for a non-physician provider type, providers are clearly practicing in that specialty and attempting to self-identify through taxonomy selection, but **no NUCC code exists** to receive them. These providers are forced into physician codes by the absence of an appropriate alternative.
+> **A real, established clinical specialty exists. Providers are clearly practicing in it and attempting to
+> self-identify through taxonomy selection — but no NUCC code exists to receive them.**
+> These providers are forced into physician codes by the absence of an appropriate alternative.
+> Each case here represents a candidate for a formal NUCC taxonomy petition.
 
 #### NP Specialties with No Current NUCC Code
 
@@ -155,9 +162,13 @@ True NUCC gaps in the masters space include: **Athletic Trainer (MS/ATC)**, **He
 
 ---
 
-### Bucket 3: Records That Are Genuinely Ambiguous or Unresolvable
+### 🔴 Bucket 3: NOT SURE HOW TO SOLVE
 
-These records remain blank and should be flagged for manual review or held pending broader policy decisions. Neither an ETL fix nor a new NUCC code petition fully resolves them:
+> **Neither an ETL remap nor a new NUCC code petition fully resolves these cases.**
+> These records remain blank and should be flagged for manual review or held pending
+> broader clinical policy decisions. The root cause varies — some are structural NUCC gaps,
+> some are likely upstream data entry problems, and some are genuine scope-of-practice questions
+> with no clean taxonomy answer.
 
 - **NP + surgical specialty:** An `NP` or `CRNP` choosing `NEUROLOGICAL SURGERY` or `THORACIC SURGERY` is practicing in a surgical support role. There is no surgical NP taxonomy in NUCC. Whether this warrants a new code or is better captured by documenting the supporting care role is a clinical policy question.
 - **PA + Radiology/Pathology/Anesthesia:** PAs work in these settings but neither Medical PA nor Surgical PA accurately describes them. A more granular PA taxonomy would resolve this, but is a NUCC petition issue.
@@ -168,12 +179,14 @@ These records remain blank and should be flagged for manual review or held pendi
 
 ## Recommended Next Steps
 
-1. **Immediate ETL conversion** for all `match_strength = 3` and `match_strength = 2` rows across the NP and PA files — approximately **38,000 provider records**. Target values are already populated in `should_use_tax` and `should_use_tax_description`.
+1. 🟢 **SOLVE WITH ETL** — Run immediate ETL conversion for all `match_strength = 3` and `match_strength = 2` rows across the NP and PA files — approximately **38,000 provider records**. Target values are already populated in `should_use_tax` and `should_use_tax_description`. No manual review needed.
 
-2. **Human review of strength-1 rows** (~3,200 providers across NP and PA files) before conversion. These are reasonable but indirect matches where clinical context should confirm the mapping.
+2. 🟢 **SOLVE WITH ETL (with review)** — Human review of `match_strength = 1` rows (~3,200 providers across NP and PA files) before conversion. These are reasonable but indirect matches where clinical context should confirm the mapping before the ETL runs.
 
-3. **Draft NUCC taxonomy petition** for the highest-volume NP specialty gaps: Emergency Medicine NP, Cardiovascular NP, Dermatology NP, Hematology/Oncology NP, and Neurology NP — all have over 200 affected providers in this dataset alone and have established credentialing bodies already issuing specialty certificates.
+3. 🟡 **CONSIDER NEW NUCC CODE** — Draft a NUCC taxonomy petition for the highest-volume NP specialty gaps: Emergency Medicine NP (543 providers), Cardiovascular NP (374), Dermatology NP (317), Hematology/Oncology NP (269), and Neurology NP (231) — all have established credentialing bodies already issuing specialty certificates, making the case for NUCC recognition strong.
 
-4. **Reclassify MPT/MSPT/MOT records** away from the masters-degree credential bucket into the correct NUCC Physical Therapist or Occupational Therapist taxonomy groupings, which already have appropriate codes under their own NUCC section.
+4. 🟡 **CONSIDER NEW NUCC CODE** — Petition for specialty-specific PA codes beyond the current medical/surgical binary: Emergency Medicine PA, Cardiovascular/Cardiothoracic Surgery PA, Dermatology PA, Orthopaedic Surgery PA, and Neurosurgery PA all have established board certifications with no NUCC home.
 
-5. **Flag and audit remaining blank records** for upstream data quality review — many likely represent miscoded entries rather than genuine taxonomy gaps.
+5. 🟡 **CONSIDER NEW NUCC CODE (or reclassify)** — Reclassify MPT/MSPT/MOT records into the correct NUCC Physical Therapist or Occupational Therapist taxonomy groupings, which already have appropriate codes under their own NUCC section. This is a FaCeT classification fix more than a NUCC petition.
+
+6. 🔴 **NOT SURE HOW TO SOLVE** — Flag and audit the remaining blank records. Separate the likely upstream data entry errors (MS choosing Cardiovascular Disease Physician) from the genuine scope-of-practice ambiguities (NP in Neurological Surgery, PA in Radiology) and handle each class differently based on clinical policy guidance.
