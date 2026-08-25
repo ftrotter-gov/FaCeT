@@ -1,0 +1,1 @@
+**Specialties correctly left blank** — there is simply no NP taxonomy for: Emergency Medicine, Cardiovascular Disease, Dermatology, Oncology, Orthopedic Surgery, Neurology, Anesthesiology, Pulmonary, Urology, Gastroenterology, and all the other surgical/procedural/imaging specialties where the NUCC has no NP subspecialty code.
