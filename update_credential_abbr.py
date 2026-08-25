@@ -146,7 +146,7 @@ class CredentialUpdater:
                 'insert_credential_doctor_not_physician.sql',
                 'insert_credential_nurses_batch1.sql',
                 'insert_credential_nurses_batch2.sql',
-                'insert_credential_midlevels.sql',
+                'insert_credential_npndpp.sql',
                 'insert_credential_physical_therapists.sql',
                 'insert_credential_psychosocial_therapists.sql',
                 'insert_credential_other.sql',

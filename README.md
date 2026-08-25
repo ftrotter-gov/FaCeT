@@ -7,7 +7,7 @@ FACET is a taxonomy of clinical credentials derived from the real-world [NPPES d
 ## FACET Features
 
 * FACET is comprehensive. It has over 500 credentials, built from what actual clinicians have typed into NPPES over the last 20 years or so, this is representative of what actual in the wild credentials look like.
-* It is properly segmented into different classes of credentials (mid-levels vs physicians). It does through simple segmentation of ids (physicians are 1-1000, Nurses are 1001-10000 etc) 
+* It is properly segmented into different classes of credentials (Non-Physician, Non-Doctor Prescribing Providers (NPNDPP) vs physicians). It does through simple segmentation of ids (physicians are 1-1000, Nurses are 1001-10000 etc) 
 * It has international credentials for physicians (i.e. MBChB, YI-XUE-SHI, etc). 
 * FACET supports unicode representations of the same. (醫學士).
 * It differentiates physician-only credentials (ABFP).
