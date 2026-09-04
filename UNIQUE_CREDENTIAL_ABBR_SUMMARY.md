@@ -59,7 +59,43 @@ All 10 credential insert files were updated to include the new column:
 - ID 1055: `RN-BC` → `RN-BC_11` (School Nursing)
 - ID 1217: `RN-BC` → `RN-BC_12` (General Nursing Practice Certification)
 
-### 4. Merged SQL File Generated
+#### Clinical-Adjacent (Non-Clinical) Collisions
+
+The clinical-adjacent credential set (`insert_credentials_clinical_adjacent.sql` /
+`json/insert_credentials_clinical_adjacent.json`, IDs in the 70000 range) introduced
+several abbreviations that collide with credentials that already existed in the
+codeset. These were briefly given a `" (nc)"` postfix; that pattern has been retired
+in favor of the original `_1` / `_2` numeric suffix convention.
+
+- ID 70013: `CPC` → `CPC_1` (Certified Professional Coder, AAPC) — collides with ID 50051 `CPC` (Certified Professional Coder)
+- ID 70015: `CIC` → `CIC_1` (Certified Inpatient Coder, AAPC) — collides with ID 1142 `CIC` (Certified in Infection Control, clinical)
+- ID 70052: `CPHRM` → `CPHRM_1` (Certified Professional in Health Care Risk Management, AHA) — collides with ID 1196 `CPHRM` (clinical nursing)
+- ID 70083: `CPHQ` → `CPHQ_1` (Certified Professional in Healthcare Quality, NAHQ) — collides with ID 1195 `CPHQ` (clinical nursing)
+- ID 70102: `CER` → `CER_1` (Certified Endoscope Reprocessor, HSPA) — collides with ID 50068 `CER` (Certificate, FHIR)
+- ID 70106: `CMC` → `CMC_1` (Certified Medical Coder, PMI) — collides with ID 1072 `CMC` (Cardiac Medicine (Adult), clinical)
+
+Collisions entirely inside the clinical-adjacent set are numbered in the same way:
+
+- ID 70044: `CHC` → `CHC_1` (Certified in Healthcare Compliance, HCCA)
+- ID 70048: `CHC` → `CHC_2` (Certified Health Care Constructor, AHA)
+
+### 5. Suffix Convention and Clinical Precedence Rule
+
+- Unique abbreviations are formed by appending `_1`, `_2`, `_3`, … to the base
+  `credential_abbr`. Do **not** use parenthetical postfixes such as `" (nc)"`.
+- **Clinical wins.** When a non-clinical (or clinical-adjacent) credential collides
+  with a clinical credential, the clinical credential keeps the plain, unmodified
+  abbreviation as its `unique_credential_abbr` (e.g. `CIC`), and the non-clinical
+  credential receives the numeric suffix (`CIC_1`, `CIC_2`, and so on).
+- When a collision is between two credentials of the same kind (both clinical, or
+  both non-clinical), the incumbent/pre-existing row keeps the plain abbreviation
+  where one already had it; otherwise all colliding rows are numbered `_1`, `_2`, …
+- `credential_abbr` is always left unchanged — only `unique_credential_abbr` carries
+  the suffix.
+- Which row "wins" for auto-mapping purposes is tracked separately in
+  `duplicate_abbreviation_code` (see `AI_Instructions/Duplicates.md`).
+
+### 6. Merged SQL File Generated
 - **File Created**: `merged_sql/merged.sql`
 - Contains all CREATE and INSERT statements with the new `unique_credential_abbr` column
 - Ready for database import
@@ -73,7 +109,8 @@ Created `update_credential_abbr.py` to automate the process:
 ## Summary
 - ✓ 1 CREATE TABLE statement updated
 - ✓ 10 INSERT files updated
-- ✓ 24 total duplicate credentials resolved (6 abbreviations with 2-12 variants each)
+- ✓ 24 total duplicate credentials resolved in the original pass (6 abbreviations with 2-12 variants each)
+- ✓ 8 additional clinical-adjacent collisions resolved with `_1` / `_2` suffixes (the retired `" (nc)"` postfix is no longer used anywhere)
 - ✓ Merged SQL file generated successfully
 - ✓ All credentials now have unique identifiers via `unique_credential_abbr`
 
