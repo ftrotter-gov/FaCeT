@@ -39,24 +39,7 @@ Each file is a JSON **list of credential-class objects**. Every object has a
 ```
 
 `credential_class` appears both on the group object and on every row, so the
-data can be used either grouped or flattened row by row. The same value is now
-stored in the `credential_class` column of the SQL files.
+data can be used either grouped or flattened row by row. 
 
-SQL `TRUE`/`FALSE` become JSON booleans and `NULL` becomes `null`.
 
-## Regenerating
-
-```bash
-python sql_to_json.py                  # rewrite sql/ and regenerate json/
-python sql_to_json.py --no-sql-update  # regenerate json/ only
-```
-
-## Verifying
-
-```bash
-python -m unittest test_sql_to_json -v
-```
-
-The tests confirm that every SQL row is present in the JSON, that the values and
-column names round-trip exactly, and that types are converted correctly.
 
