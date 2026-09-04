@@ -26,6 +26,73 @@ FACET is a taxonomy of clinical credentials derived from the real-world [NPPES d
 
 * Look in [csv/](./csv) for the CSV version of FACET and the map from raw strings
 * Please look in [sql/](./sql) for the PostGreSQL codesets. 
+* Please look in [json/](./json) for the JSON version of the codesets.
+
+## FHIR Shorthand (FSH) Output
+
+FACET is published inside FHIR Implementation Guides as
+[FHIR Shorthand](https://hl7.org/fhir/uv/shorthand/), the plain-text language
+used to author FHIR IGs. `facet_to_fsh.py` compiles the data in [json/](./json)
+into the two `.fsh` files that the [US NDH IG](https://github.com/HL7/fhir-us-ndh)
+expects in its `input/fsh/` directory:
+
+| File | Contents |
+|---|---|
+| `facet_credentials.fsh` | `FaCeTcredentialVS` value set plus the `FaCeT-credentialCS` code system of individual clinician credentials |
+| `facet_org_credential.fsh` | `FaCeTorganizationCredentialVS` value set plus the `FaCeT-org-credentialCS` code system of organizational credentials |
+
+Write the FSH into a checkout of the IG with `--out-dir`:
+
+```bash
+# Compile both files into the IG's input/fsh directory
+python facet_to_fsh.py --out-dir ../fhir-us-ndh/input/fsh
+
+# Build only one of the two files
+python facet_to_fsh.py --out-dir /tmp/fsh --only credentials
+python facet_to_fsh.py --out-dir /tmp/fsh --only org
+
+# Verify the generated files are up to date without writing (exits non-zero if stale)
+python facet_to_fsh.py --out-dir ../fhir-us-ndh/input/fsh --check
+```
+
+Concepts are emitted in `id` order, so related credentials stay grouped
+(physicians 1–1000, nurses 1001–10000, and so on). The hand-authored preamble of
+each file — the value set, the property code system, and the code system
+metadata — is reproduced verbatim; only the concept block is generated.
+
+### Verifying the FSH
+
+There are two layers of tests. The first checks the generated text and needs
+nothing beyond Python:
+
+```bash
+python -m unittest test_facet_to_fsh -v
+```
+
+The second compiles the generated files with
+[SUSHI](https://fshschool.org/docs/sushi/), the reference FSH compiler, and
+asserts that it reports no errors and that the resulting FHIR CodeSystems and
+ValueSets contain every credential:
+
+```bash
+python -m unittest test_facet_to_fsh_sushi -v
+```
+
+SUSHI is a Node package. The tests look for a `sushi` executable, try
+`npm install -g fsh-sushi` if it is missing, and skip (rather than fail) when
+it cannot be installed — so the suite still works offline. Set
+`FACET_SKIP_SUSHI=1` to skip these slower tests explicitly.
+
+You can also run the compile check directly:
+
+```bash
+python sushi_runner.py --out-dir ../fhir-us-ndh/input/fsh
+```
+
+The first SUSHI run downloads the FHIR R4 core package into `~/.fhir/packages`
+and may take a few minutes; later runs take about ten seconds. Only the two
+FaCeT files are compiled — the rest of the NDH IG depends on packages that are
+outside the scope of this repository.
 
 ## Data Dictionary
 
