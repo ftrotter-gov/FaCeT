@@ -45,12 +45,11 @@ All 10 credential insert files were updated to include the new column:
 - ID 60029: `MT` → `MT_1` (Music Therapist)
 - ID 50087: `MT` → `MT_2` (Medical Technician)
 
-#### RN-BC (12 different Board Certified Registered Nurse specialties)
+#### RN-BC (11 different Board Certified Registered Nurse specialties)
 - ID 1042: `RN-BC` → `RN-BC_1` (Certified Vascular Nurse)
 - ID 1043: `RN-BC` → `RN-BC_2` (College Health Nursing)
 - ID 1044: `RN-BC` → `RN-BC_3` (Community Health Nursing)
 - ID 1045: `RN-BC` → `RN-BC_4` (Faith Community Nursing)
-- ID 1047: `RN-BC` → `RN-BC_5` (General Nursing Practice)
 - ID 1049: `RN-BC` → `RN-BC_6` (Hemostasis Nursing)
 - ID 1050: `RN-BC` → `RN-BC_7` (High-Risk Perinatal Nursing)
 - ID 1051: `RN-BC` → `RN-BC_8` (Home Health Nursing)
@@ -58,6 +57,13 @@ All 10 credential insert files were updated to include the new column:
 - ID 1054: `RN-BC` → `RN-BC_10` (Rheumatology Nursing)
 - ID 1055: `RN-BC` → `RN-BC_11` (School Nursing)
 - ID 1217: `RN-BC` → `RN-BC_12` (General Nursing Practice Certification)
+
+The `_5` slot is intentionally vacant: ID 1047 ("General Nursing Practice") was a
+duplicate of ID 1217 ("General Nursing Practice Certification") — same ANCC
+credential, same URL, both retired — and was deleted. The remaining suffixes were
+deliberately **not** renumbered, because `unique_credential_abbr` is emitted directly
+as the FSH `concept.code`; renumbering would silently change the codes of unrelated
+credentials. The suffix is a uniqueness token, not an ordinal, so a gap is harmless.
 
 #### Clinical-Adjacent (Non-Clinical) Collisions
 
@@ -67,17 +73,52 @@ several abbreviations that collide with credentials that already existed in the
 codeset. These were briefly given a `" (nc)"` postfix; that pattern has been retired
 in favor of the original `_1` / `_2` numeric suffix convention.
 
-- ID 70013: `CPC` → `CPC_1` (Certified Professional Coder, AAPC) — collides with ID 50051 `CPC` (Certified Professional Coder)
-- ID 70015: `CIC` → `CIC_1` (Certified Inpatient Coder, AAPC) — collides with ID 1142 `CIC` (Certified in Infection Control, clinical)
-- ID 70052: `CPHRM` → `CPHRM_1` (Certified Professional in Health Care Risk Management, AHA) — collides with ID 1196 `CPHRM` (clinical nursing)
-- ID 70083: `CPHQ` → `CPHQ_1` (Certified Professional in Healthcare Quality, NAHQ) — collides with ID 1195 `CPHQ` (clinical nursing)
-- ID 70102: `CER` → `CER_1` (Certified Endoscope Reprocessor, HSPA) — collides with ID 50068 `CER` (Certificate, FHIR)
-- ID 70106: `CMC` → `CMC_1` (Certified Medical Coder, PMI) — collides with ID 1072 `CMC` (Cardiac Medicine (Adult), clinical)
+Both sides of every collision are spelled out below, so this section can be used on
+its own to see exactly which two credentials are in conflict and which one was
+suffixed. Wherever the other side of the collision is clinical, that clinical
+credential keeps the plain, unsuffixed abbreviation and the non-clinical
+clinical-adjacent credential receives the `_1` marker. The single exception is `CER`,
+where both rows are non-clinical and the tie is broken on specificity instead — see
+that entry below.
 
-Collisions entirely inside the clinical-adjacent set are numbered in the same way:
+Note that not every apparent collision was a real one. Three 70000-range rows turned
+out to be straight duplicates of credentials that already existed — same abbreviation,
+same name, same issuing organization — rather than genuinely different credentials
+sharing letters. Those were deleted outright instead of being suffixed:
 
-- ID 70044: `CHC` → `CHC_1` (Certified in Healthcare Compliance, HCCA)
-- ID 70048: `CHC` → `CHC_2` (Certified Health Care Constructor, AHA)
+- ID 70013 `CPC` (Certified Professional Coder, AAPC) — duplicate of ID 50051
+- ID 70052 `CPHRM` (Certified Professional in Health Care Risk Management, AHA) — duplicate of ID 1196
+- ID 70083 `CPHQ` (Certified Professional in Healthcare Quality, NAHQ) — duplicate of ID 1195
+
+In each case the surviving row keeps the plain, unsuffixed abbreviation, and any
+better metadata (deep-link URL, description) from the deleted row was merged into it.
+
+#### CIC (Certified in Infection Control vs Certified Inpatient Coder)
+- ID 1142: `CIC` → `CIC` (Certified in Infection Control — Certification Board of Infection Control and Epidemiology; clinical, keeps plain abbr)
+- ID 70015: `CIC` → `CIC_1` (Certified Inpatient Coder — AAPC; non-clinical, suffixed)
+
+#### CMC (Cardiac Medicine (Adult) vs Certified Medical Coder)
+- ID 1072: `CMC` → `CMC` (Cardiac Medicine (Adult) — American Association of Critical-Care Nurses; clinical, keeps plain abbr)
+- ID 70106: `CMC` → `CMC_1` (Certified Medical Coder — Practice Management Institute; non-clinical, suffixed)
+
+#### CER (Certified Endoscope Reprocessor vs Certificate)
+- ID 70102: `CER` → `CER` (Certified Endoscope Reprocessor — Healthcare Sterile Processing Association; non-clinical, keeps plain abbr)
+- ID 50068: `CER` → `CER_1` (Certificate — no credentialing organization; FHIR v2-0360 educational level, non-clinical, suffixed)
+
+`CER` is the one collision here where both rows are non-clinical, so clinical
+precedence cannot decide it. It is instead resolved by the specificity rule: ID 70102
+is a real, named, board-issued credential whose abbreviation genuinely stands for
+"Certified Endoscope Reprocessor", while ID 50068 is the generic FHIR v2-0360
+educational level "Certificate". The specific named credential keeps the plain
+abbreviation and the generic placeholder is the one that gets suffixed.
+
+Collisions entirely inside the clinical-adjacent set are numbered in the same way.
+Both rows are non-clinical, so neither can claim the plain abbreviation and both are
+numbered:
+
+#### CHC (Certified in Healthcare Compliance vs Certified Health Care Constructor)
+- ID 70044: `CHC` → `CHC_1` (Certified in Healthcare Compliance — Health Care Compliance Association; non-clinical, suffixed)
+- ID 70048: `CHC` → `CHC_2` (Certified Health Care Constructor — American Hospital Association; non-clinical, suffixed)
 
 ### 5. Suffix Convention and Clinical Precedence Rule
 
@@ -88,8 +129,14 @@ Collisions entirely inside the clinical-adjacent set are numbered in the same wa
   abbreviation as its `unique_credential_abbr` (e.g. `CIC`), and the non-clinical
   credential receives the numeric suffix (`CIC_1`, `CIC_2`, and so on).
 - When a collision is between two credentials of the same kind (both clinical, or
-  both non-clinical), the incumbent/pre-existing row keeps the plain abbreviation
-  where one already had it; otherwise all colliding rows are numbered `_1`, `_2`, …
+  both non-clinical), prefer the **more specific** credential: a real, named,
+  board-issued credential whose letters actually spell out its name keeps the plain
+  abbreviation, and a generic educational level or placeholder (e.g. the FHIR
+  v2-0360 "Certificate" row) takes the numeric suffix. This is why ID 70102
+  (Certified Endoscope Reprocessor) holds plain `CER` while ID 50068 (Certificate)
+  is `CER_1`.
+- If neither row is more specific than the other, all colliding rows are numbered
+  `_1`, `_2`, … (e.g. the two `CHC` credentials).
 - `credential_abbr` is always left unchanged — only `unique_credential_abbr` carries
   the suffix.
 - Which row "wins" for auto-mapping purposes is tracked separately in
@@ -109,8 +156,14 @@ Created `update_credential_abbr.py` to automate the process:
 ## Summary
 - ✓ 1 CREATE TABLE statement updated
 - ✓ 10 INSERT files updated
-- ✓ 24 total duplicate credentials resolved in the original pass (6 abbreviations with 2-12 variants each)
-- ✓ 8 additional clinical-adjacent collisions resolved with `_1` / `_2` suffixes (the retired `" (nc)"` postfix is no longer used anywhere)
+- ✓ 23 total duplicate credentials resolved in the original pass (6 abbreviations with
+  2-11 variants each)
+- ✓ 4 genuine clinical-adjacent collisions resolved with `_1` / `_2` suffixes (`CIC`,
+  `CMC`, `CER` against pre-existing credentials, plus `CHC` internal to the
+  clinical-adjacent set); the retired `" (nc)"` postfix is no longer used anywhere
+- ✓ 4 rows deleted as true duplicates rather than collisions: ID 70013 (`CPC`),
+  ID 70052 (`CPHRM`), ID 70083 (`CPHQ`), and ID 1047 (`RN-BC`, General Nursing
+  Practice)
 - ✓ Merged SQL file generated successfully
 - ✓ All credentials now have unique identifiers via `unique_credential_abbr`
 

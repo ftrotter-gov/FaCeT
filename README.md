@@ -174,7 +174,6 @@ Which recently resulted in:
 1043,RN-BC,College Health Nursing,2
 1044,RN-BC,Community Health Nursing,2
 1045,RN-BC,Faith Community Nursing,2
-1047,RN-BC,General Nursing Practice,2
 1049,RN-BC,Hemostasis Nursing,2
 1050,RN-BC,High-Risk Perinatal Nursing,2
 1051,RN-BC,Home Health Nursing,2
