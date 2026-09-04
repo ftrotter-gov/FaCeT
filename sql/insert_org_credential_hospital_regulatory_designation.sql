@@ -13,7 +13,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
 (
     4000,
@@ -26,7 +27,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'CMS designations'
 ),
 (
     4001,
@@ -39,7 +41,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'CMS designations'
 ),
 (
     4002,
@@ -52,7 +55,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'CMS designations'
 ),
 (
     4003,
@@ -65,7 +69,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'CMS designations'
 ),
 (
     4004,
@@ -78,7 +83,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'CMS designations'
 ),
 (
     4005,
@@ -91,7 +97,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'CMS designations'
 ),
 (
     4006,
@@ -104,7 +111,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'CMS designations'
 ),
 (
     4007,
@@ -117,7 +125,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'CMS designations'
 ),
 (
     4008,
@@ -130,7 +139,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'CMS designations'
 ),
 (
     4009,
@@ -143,5 +153,6 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'CMS designations'
 );

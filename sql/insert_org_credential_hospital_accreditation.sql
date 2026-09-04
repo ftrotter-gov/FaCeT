@@ -13,7 +13,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
     (
         1,
@@ -26,7 +27,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commisssion Accreditations'
     ),
     (
         2,
@@ -39,7 +41,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commisssion Accreditations'
     ),
     (
         3,
@@ -52,7 +55,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commisssion Accreditations'
     ),
     (
         4,
@@ -65,7 +69,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commisssion Accreditations'
     ),
     (
         5,
@@ -78,7 +83,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commisssion Accreditations'
     ),
     (
         6,
@@ -91,7 +97,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commisssion Accreditations'
     ),
     (
         7,
@@ -104,7 +111,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commisssion Accreditations'
     ),
     (
         8,
@@ -117,7 +125,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commisssion Accreditations'
     );
 
 
@@ -133,7 +142,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
     (
         9,
@@ -146,7 +156,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'DNV Healthcare'
     ),
     (
         10,
@@ -159,7 +170,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'DNV Healthcare'
     ),
     (
         11,
@@ -172,7 +184,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'DNV Healthcare'
     );
 
 
@@ -188,7 +201,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
     (
         12,
@@ -201,7 +215,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'ACHC'
     ),
     (
         13,
@@ -214,7 +229,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'ACHC'
     );
 
 
@@ -230,7 +246,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
     (
         14,
@@ -243,5 +260,6 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'CIHQ'
     );

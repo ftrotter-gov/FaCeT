@@ -13,7 +13,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
 (
     2000,
@@ -26,7 +27,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'NCI'
 ),
 (
     2001,
@@ -39,7 +41,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'NCI'
 ),
 (
     2002,
@@ -52,7 +55,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'NCI'
 );
 
 
@@ -68,7 +72,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
 (
     3000,
@@ -81,7 +86,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'Trauma Centers'
 ),
 (
     3001,
@@ -94,7 +100,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'Trauma Centers'
 ),
 (
     3002,
@@ -107,7 +114,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'Trauma Centers'
 ),
 (
     3003,
@@ -120,7 +128,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'Trauma Centers'
 );
 
 
@@ -135,7 +144,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
 (
     3005,
@@ -148,7 +158,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'Trauma Centers'
 );
 
 
@@ -163,7 +174,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
 (
     3006,
@@ -176,7 +188,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'Trauma Centers'
 ),
 (
     3007,
@@ -189,7 +202,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'Trauma Centers'
 );
 
 
@@ -205,7 +219,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
 (
     3010,
@@ -218,7 +233,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American Burn Association'
 ),
 (
     3011,
@@ -231,7 +247,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American Burn Association'
 ),
 (
     3012,
@@ -244,5 +261,6 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American Burn Association'
 );

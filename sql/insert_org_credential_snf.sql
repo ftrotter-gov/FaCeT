@@ -10,7 +10,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
 (
     10000,
@@ -23,7 +24,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'AHHC'
 ),
 (
     10001,
@@ -36,7 +38,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'AHHC'
 ),
 (
     10002,
@@ -49,6 +52,7 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'AHHC'
 );
 

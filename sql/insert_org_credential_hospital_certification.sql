@@ -13,7 +13,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
     (
         1000,
@@ -26,7 +27,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1001,
@@ -39,7 +41,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1002,
@@ -52,7 +55,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1003,
@@ -65,7 +69,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1004,
@@ -78,7 +83,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1005,
@@ -91,7 +97,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1006,
@@ -104,7 +111,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1007,
@@ -117,7 +125,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1008,
@@ -130,7 +139,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1009,
@@ -143,7 +153,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1010,
@@ -156,7 +167,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1011,
@@ -169,7 +181,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1012,
@@ -182,7 +195,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1013,
@@ -195,7 +209,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1014,
@@ -208,7 +223,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1015,
@@ -221,7 +237,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1016,
@@ -234,7 +251,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1017,
@@ -247,7 +265,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1018,
@@ -260,7 +279,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1019,
@@ -273,7 +293,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1020,
@@ -286,7 +307,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1021,
@@ -299,7 +321,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1022,
@@ -312,7 +335,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1023,
@@ -325,7 +349,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1024,
@@ -338,7 +363,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1025,
@@ -351,7 +377,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1026,
@@ -364,7 +391,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1027,
@@ -377,7 +405,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1028,
@@ -390,7 +419,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1029,
@@ -403,7 +433,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1030,
@@ -416,7 +447,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1031,
@@ -429,7 +461,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1032,
@@ -442,7 +475,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1033,
@@ -455,7 +489,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1034,
@@ -468,7 +503,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1035,
@@ -481,7 +517,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1036,
@@ -494,7 +531,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1037,
@@ -507,7 +545,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1038,
@@ -520,7 +559,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1039,
@@ -533,7 +573,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1040,
@@ -546,7 +587,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1041,
@@ -559,7 +601,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1042,
@@ -572,7 +615,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1043,
@@ -585,7 +629,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1044,
@@ -598,7 +643,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1045,
@@ -611,7 +657,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1046,
@@ -624,7 +671,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1047,
@@ -637,7 +685,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1048,
@@ -650,7 +699,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1049,
@@ -663,7 +713,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1050,
@@ -676,7 +727,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     ),
     (
         1051,
@@ -689,7 +741,8 @@ INSERT INTO dctnry.org_credential (
         FALSE,
         FALSE,
         NULL,
-        NULL
+        NULL,
+        'Joint Commission Certifications'
     );
 
 
@@ -705,7 +758,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
 (
     1100,
@@ -718,7 +772,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Surgeons'
 ),
 (
     1101,
@@ -731,7 +786,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Surgeons'
 ),
 (
     1102,
@@ -744,7 +800,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Surgeons'
 ),
 (
     1103,
@@ -757,7 +814,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Surgeons'
 ),
 (
     1104,
@@ -770,7 +828,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Surgeons'
 ),
 (
     1105,
@@ -783,7 +842,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Surgeons'
 ),
 (
     1106,
@@ -796,7 +856,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Surgeons'
 ),
 (
     1107,
@@ -809,7 +870,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Surgeons'
 ),
 (
     1108,
@@ -822,7 +884,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Surgeons'
 );
 
 
@@ -838,7 +901,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
 (
     1200,
@@ -851,7 +915,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American Heart Association'
 ),
 (
     1201,
@@ -864,7 +929,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American Heart Association'
 ),
 (
     1202,
@@ -877,7 +943,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American Heart Association'
 ),
 (
     1203,
@@ -890,7 +957,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American Heart Association'
 ),
 (
     1204,
@@ -903,7 +971,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American Heart Association'
 );
 
 
@@ -919,7 +988,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
 (
     1300,
@@ -932,7 +1002,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Radiology'
 ),
 (
     1301,
@@ -945,7 +1016,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Radiology'
 ),
 (
     1302,
@@ -958,7 +1030,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Radiology'
 ),
 (
     1303,
@@ -971,7 +1044,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Radiology'
 ),
 (
     1304,
@@ -984,7 +1058,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Radiology'
 ),
 (
     1305,
@@ -997,7 +1072,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Radiology'
 ),
 (
     1306,
@@ -1010,7 +1086,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Radiology'
 ),
 (
     1307,
@@ -1023,7 +1100,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Radiology'
 ),
 (
     1308,
@@ -1036,7 +1114,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Radiology'
 );
 
 
@@ -1052,7 +1131,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
 (
     1400,
@@ -1065,7 +1145,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American Nurses Credentialing Center'
 ),
 (
     1401,
@@ -1078,7 +1159,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American Nurses Credentialing Center'
 );
 
 
@@ -1094,7 +1176,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
 (
     1500,
@@ -1107,7 +1190,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'Baby Friendly'
 );
 
 
@@ -1123,7 +1207,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
 (
     1600,
@@ -1136,7 +1221,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'CARF'
 ),
 (
     1601,
@@ -1149,7 +1235,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'CARF'
 ),
 (
     1602,
@@ -1162,7 +1249,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'CARF'
 ),
 (
     1603,
@@ -1175,7 +1263,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'CARF'
 ),
 (
     1604,
@@ -1188,7 +1277,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'CARF'
 ),
 (
     1605,
@@ -1201,7 +1291,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'CARF'
 ),
 (
     1606,
@@ -1214,7 +1305,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'CARF'
 );
 
 
@@ -1230,7 +1322,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
 (
     1700,
@@ -1243,7 +1336,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'ABA'
 ),
 (
     1701,
@@ -1256,7 +1350,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'ABA'
 ),
 (
     1702,
@@ -1269,7 +1364,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'ABA'
 );
 
 
@@ -1285,7 +1381,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
 (
     1800,
@@ -1298,7 +1395,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'Undersea & Hyperbaric Medical Society'
 );
 
 
@@ -1314,7 +1412,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
 (
     1900,
@@ -1327,7 +1426,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'Other'
 ),
 (
     1901,
@@ -1340,7 +1440,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'Other'
 ),
 (
     1902,
@@ -1353,7 +1454,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'Other'
 ),
 (
     1903,
@@ -1366,7 +1468,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'Other'
 ),
 (
     1904,
@@ -1379,7 +1482,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'Other'
 ),
 (
     1905,
@@ -1392,7 +1496,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'Other'
 ),
 (
     1906,
@@ -1405,7 +1510,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'Other'
 );
 
 
@@ -1421,7 +1527,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
 (
     1950,
@@ -1434,7 +1541,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Cardiology (ACC) Accreditation Services'
 ),
 (
     1951,
@@ -1447,7 +1555,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Cardiology (ACC) Accreditation Services'
 ),
 (
     1952,
@@ -1460,7 +1569,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Cardiology (ACC) Accreditation Services'
 ),
 (
     1953,
@@ -1473,7 +1583,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Cardiology (ACC) Accreditation Services'
 ),
 (
     1954,
@@ -1486,7 +1597,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Cardiology (ACC) Accreditation Services'
 ),
 (
     1955,
@@ -1499,7 +1611,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Cardiology (ACC) Accreditation Services'
 );
 
 
@@ -1514,7 +1627,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
 (
     1990,
@@ -1527,7 +1641,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Cardiology (ACC) Accreditation Services'
 );
 
 
@@ -1543,7 +1658,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
 (
     1960,
@@ -1556,7 +1672,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Emergency Physicians'
 ),
 (
     1961,
@@ -1569,7 +1686,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Emergency Physicians'
 ),
 (
     1962,
@@ -1582,7 +1700,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'American College of Emergency Physicians'
 );
 
 
@@ -1598,7 +1717,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
 (
     1965,
@@ -1611,7 +1731,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'DNV certifications'
 );
 
 
@@ -1626,7 +1747,8 @@ INSERT INTO dctnry.org_credential (
     is_credential_retired,
     is_cms_deeming_credential,
     created_at,
-    updated_at
+    updated_at,
+    credential_class
 ) VALUES
 (
     1970,
@@ -1639,7 +1761,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'DNV certifications'
 ),
 (
     1971,
@@ -1652,7 +1775,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'DNV certifications'
 ),
 (
     1972,
@@ -1665,7 +1789,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'DNV certifications'
 ),
 (
     1973,
@@ -1678,7 +1803,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'DNV certifications'
 ),
 (
     1974,
@@ -1691,7 +1817,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'DNV certifications'
 ),
 (
     1975,
@@ -1704,7 +1831,8 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'DNV certifications'
 ),
 (
     1976,
@@ -1717,5 +1845,6 @@ INSERT INTO dctnry.org_credential (
     FALSE,
     FALSE,
     NULL,
-    NULL
+    NULL,
+    'DNV certifications'
 );
