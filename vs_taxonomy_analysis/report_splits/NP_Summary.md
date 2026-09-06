@@ -13,4 +13,3 @@ There is simply no NP taxonomy for:
 - Urology
 - Gastroenterology
 - All the other surgical/procedural/imaging specialties where the NUCC has no NP subspecialty code
-
