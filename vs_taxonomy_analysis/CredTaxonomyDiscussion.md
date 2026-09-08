@@ -17,6 +17,46 @@ The analysis produced three output columns appended to each report file:
 
 Across all three files, **47,504 provider records** were reviewed.
 
+> ⚠️ **Scope caveat — "physician grouping" does not mean "wrong."**
+> This analysis is built on the premise that a non-physician credential paired with a
+> taxonomy code from the NUCC *Allopathic & Osteopathic Physicians* grouping is an error.
+> That premise does not hold universally. Oral & maxillofacial surgeons routinely hold
+> **both** dental and medical degrees (DMD/MD, DDS/MD), and NUCC files
+> `204E00000X` under the physician grouping while naming it
+> *"Oral & Maxillofacial Surgery (D.M.D.)"* — the dental degree is in the code's own
+> display name. A `DDS` or `DMD` using that code is **correct**.
+>
+> 1,072 such providers (`DDS` 641, `DMD` 419, `BDS` 10, `OMFS` 2) were initially
+> miscounted as mismatches. They are now routed to `report_splits/LegitimatePairs.csv`
+> and excluded from the report. The allow-list lives in `report_splits/legitimate_pairs.py`
+> and is enforced by `report_splits/test_split_nonphysician.py`.
+>
+> Other dual-degree or degree-specific codes (`209800000X` Legal Medicine (M.D./D.O.),
+> `207SG0201X` Clinical Genetics (M.D.)) have **not** yet been audited the same way.
+
+> ⚠️ **Second caveat — some rows are misdecoded *credentials*, not mischosen taxonomies.**
+> In several cases FaCeT expanded a credential abbreviation to the wrong profession. The
+> provider chose a perfectly sensible taxonomy code; the credential dictionary is what's
+> wrong. The provider population's own taxonomy choices give this away:
+>
+> | Abbrev | FaCeT currently says | Actually means | Providers | Evidence |
+> |---|---|---|---|---|
+> | `AA` | Associate of Arts | **Anesthesiologist Assistant** | 183 | 97.8% on anesthesiology codes |
+> | `CAA` | Certified Audiologist Assistant | **Certified Anesthesiologist Assistant** | 94 | 100% on anesthesiology codes |
+> | `CSFA` | Certified School Food Administrator | **Certified Surgical First Assistant** | 95 | 97.9% on surgical codes |
+>
+> An Associate of Arts degree would scatter across all of medicine; a 97.8% concentration
+> on anesthesiology is only explicable if these are Anesthesiologist Assistants. Correct
+> NUCC codes already exist: `367H00000X` Anesthesiologist Assistant and `246ZC0007X`
+> Surgical Assistant.
+>
+> **These need an upstream fix to the credential dictionary, not just a taxonomy remap.**
+> Remapping alone would leave the wrong credential name in place to mislead the next
+> analysis. 366 corroborated rows now route to `report_splits/MisdecodedCredentials.csv`;
+> the 6 providers whose taxonomy choice does *not* corroborate the correction (e.g. an
+> `AA` on a Family Medicine code, which may genuinely be an Associate of Arts) are
+> deliberately left in the mismatch report for human review.
+
 ---
 
 ## File-by-File Summary

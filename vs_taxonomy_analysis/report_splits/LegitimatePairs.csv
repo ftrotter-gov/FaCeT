@@ -1,0 +1,5 @@
+facetCredentialCode,facetCredentialName,chosenTaxonomyCode,chosenTaxonomyDescription,providerCount,should_use_tax,should_use_tax_description,match_strength
+DDS,Doctor of Dental Surgery,204E00000X,ORAL & MAXILLOFACIAL SURGERY (D.M.D.),641,,,
+DMD,Doctor of Medicine in Dentistry,204E00000X,ORAL & MAXILLOFACIAL SURGERY (D.M.D.),419,,,
+BDS,Bachelor of Dental Surgery,204E00000X,ORAL & MAXILLOFACIAL SURGERY (D.M.D.),10,,,
+OMFS,Oral and Maxillofacial Surgeon,204E00000X,ORAL & MAXILLOFACIAL SURGERY (D.M.D.),2,,,
